@@ -1,4 +1,6 @@
-% Copyright (c) 2018, Xgrid Inc, http://xgrid.co
+%
+% Owner: Ali Jabir
+% Email: syedalijabir@gmail.com
 %
 % Licensed under the Apache License, Version 2.0 (the "License");
 % you may not use this file except in compliance with the License.
