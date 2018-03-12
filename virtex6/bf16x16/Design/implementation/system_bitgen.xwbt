@@ -1,7 +1,0 @@
-INFILE=E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\implementation\system.ncd
-OUTFILE=E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\implementation\system.bit
-FAMILY=Virtex6
-PART=xc6vlx240t-1ff1156
-WORKINGDIR=E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\implementation
-LICENSE=ISE
-USER_INFO=__0_0_0
