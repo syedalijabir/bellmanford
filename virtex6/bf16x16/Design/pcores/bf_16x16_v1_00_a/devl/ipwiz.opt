@@ -1,0 +1,10 @@
+-batch 
+-create bf_16x16 
+-ver 1.00.a 
+-dir "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design" 
+-lang verilog 
+-bus axi4lite s 
+-reg 10 
+-xps 
+-ise 
+-driver 

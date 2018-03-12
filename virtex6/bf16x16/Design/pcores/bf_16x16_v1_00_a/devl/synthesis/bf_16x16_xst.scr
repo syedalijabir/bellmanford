@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\devl\synthesis\bf_16x16_xst.prj"
+-top bf_16x16
+-p virtex6
+-ofn "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\devl\synthesis\bf_16x16_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib bf_16x16_v1_00_a

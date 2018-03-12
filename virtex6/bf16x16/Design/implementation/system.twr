@@ -1,0 +1,260 @@
+--------------------------------------------------------------------------------
+Release 13.2 Trace  (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+E:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -e 3 -xml system.twx
+system.ncd system.pcf
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,package,speed:     xc6vlx240t,ff1156,C,-1 (PRODUCTION 1.15 2011-06-20, STEPPING level 0)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_DDR3_SDRAM_clk_rsync = PERIOD TIMEGRP 
+"TNM_DDR3_SDRAM_clk_rsync" 5 ns HIGH         50%;
+
+ 1113 paths analyzed, 757 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.568ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_DDR3_SDRAM_clk_rsync_rise_to_fall = MAXDELAY FROM TIMEGRP 
+        "TG_DDR3_SDRAM_clk_rsync_rise" TO TIMEGRP         
+"TG_DDR3_SDRAM_clk_rsync_fall" 5 ns;
+
+ 53 paths analyzed, 53 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   1.746ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_DDR3_SDRAM_MC_PHY_INIT_SEL = MAXDELAY FROM TIMEGRP        
+ "TNM_DDR3_SDRAM_PHY_INIT_SEL" TO TIMEGRP "FFS" 10 ns;
+
+ 150 paths analyzed, 150 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   6.901ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_TIG_DDR3_SDRAM_IODELAY_CTRL_RDY_O_SYNCH_path" TIG;
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_TIG_DDR3_SDRAM_IODELAY_CTRL_RST_SYNCH_path" TIG;
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_TIG_microblaze_0_Reset_path" TIG;
+
+ 3 paths analyzed, 3 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_axi4_0_reset_resync_path" TIG;
+
+ 33 paths analyzed, 24 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_axi4_0_MI0_sync_clock_conv_outbound = MAXDELAY FROM 
+TIMEGRP         "axi4_0_MI0_clock_conv_otherclk_local" TO TIMEGRP         
+"axi4_0_MI0_clock_conv_ACLK_global" 10 ns;
+
+ 191 paths analyzed, 180 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.456ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_axi4_0_MI0_sync_clock_conv_inbound = MAXDELAY FROM 
+TIMEGRP         "axi4_0_MI0_clock_conv_ACLK_global" TO TIMEGRP         
+"axi4_0_MI0_clock_conv_otherclk_local" 10 ns;
+
+ 189 paths analyzed, 185 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.105ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_axi4_0_MI0_sync_clock_conv_intrans = MAXDELAY FROM 
+TIMEGRP         "axi4_0_MI0_clock_conv_otherclk_global" TO TIMEGRP         
+"axi4_0_MI0_clock_conv_ACLK_local" 10 ns;
+
+ 382 paths analyzed, 83 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.779ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_axi4_0_MI0_sync_clock_conv_outtrans = MAXDELAY FROM 
+TIMEGRP         "axi4_0_MI0_clock_conv_ACLK_local" TO TIMEGRP         
+"axi4_0_MI0_clock_conv_otherclk_global" 10 ns;
+
+ 17 paths analyzed, 17 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.702ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_axi4lite_0_reset_resync_path" TIG;
+
+ 11 paths analyzed, 8 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_TIG_microblaze_0_dlmb_POR_FF_I_path" TIG;
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_TIG_microblaze_0_ilmb_POR_FF_I_path" TIG;
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 200 MHz HIGH 
+50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.800ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clk_400_0000MHzMMCM0_nobuf_varphase = PERIOD TIMEGRP      
+   "clk_400_0000MHzMMCM0_nobuf_varphase" TS_sys_clk_pin * 2 HIGH 50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_MMCM0_CLKOUT1 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_MMCM0_CLKOUT1" 
+TS_sys_clk_pin         HIGH 50%;
+
+ 52753 paths analyzed, 11230 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.000ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_MMCM0_CLKOUT0 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_MMCM0_CLKOUT0" 
+TS_sys_clk_pin         * 0.5 HIGH 50%;
+
+ 28429970 paths analyzed, 23021 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   9.985ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_MMCM0_CLKOUT2 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_MMCM0_CLKOUT2" 
+TS_sys_clk_pin         * 2 HIGH 50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.429ns.
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |      5.000ns|      2.800ns|      5.000ns|            0|            0|            0|     28482723|
+| TS_clk_400_0000MHzMMCM0_nobuf_|      2.500ns|          N/A|          N/A|            0|            0|            0|            0|
+| varphase                      |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      5.000ns|      5.000ns|          N/A|            0|            0|        52753|            0|
+| erator_0_SIG_MMCM0_CLKOUT1    |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|     10.000ns|      9.985ns|          N/A|            0|            0|     28429970|            0|
+| erator_0_SIG_MMCM0_CLKOUT0    |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      2.500ns|      1.429ns|          N/A|            0|            0|            0|            0|
+| erator_0_SIG_MMCM0_CLKOUT2    |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK_N
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_N          |    9.985|         |         |         |
+CLK_P          |    9.985|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK_P
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_N          |    9.985|         |         |         |
+CLK_P          |    9.985|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 28484869 paths, 0 nets, and 66301 connections
+
+Design statistics:
+   Minimum period:   9.985ns   (Maximum frequency: 100.150MHz)
+   Maximum path delay from/to any node:   6.901ns
+
+
+Analysis completed Sun Jun 30 11:26:41 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 863 MB
+
+
+

@@ -1,0 +1,2327 @@
+Release 13.2 - xst O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: bf_16x16.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "bf_16x16.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "bf_16x16"
+Output Format                      : NGC
+Target Device                      : xc6vlx240t-1-ff1156
+
+---- Source Options
+Top Module Name                    : bf_16x16
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file \"E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\DesignProcessingElement.v\" into library work
+Parsing module <PE>.
+Analyzing Verilog file \"E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\DesignLevel2CU.v\" into library work
+Parsing module <Level2CU>.
+Analyzing Verilog file \"E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\DesignLevel1CU.v\" into library work
+Parsing module <Level1CU>.
+Analyzing Verilog file \"E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\DesignDRAM_ComputationalBlock.v\" into library work
+Parsing module <DRAM_ComputationalBlock>.
+Analyzing Verilog file \"E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\DesignCounterBlock.v\" into library work
+Parsing module <CounterBlock>.
+Analyzing Verilog file \"E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\TheController.v\" into library work
+Parsing module <TheController>.
+Analyzing Verilog file \"E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\DesignAGU.v\" into library work
+Parsing module <AGU>.
+Analyzing Verilog file \"E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\DATAPATH.v\" into library work
+Parsing module <DATAPATH>.
+Analyzing Verilog file \"E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\TheProcessingBlock.v\" into library work
+Parsing module <TheProcessingBlock>.
+Analyzing Verilog file \"E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\devl\projnav\ipcore_dir\BRAM_0.v\" into library work
+Parsing module <BRAM_0>.
+Analyzing Verilog file \"E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v\" into library work
+Parsing module <user_logic>.
+Parsing VHDL file "E:\Xilinx\13.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\proc_common_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <proc_common_pkg>.
+Parsing package body <proc_common_pkg>.
+Parsing VHDL file "E:\Xilinx\13.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\family_support.vhd" into library proc_common_v3_00_a
+Parsing package <family_support>.
+Parsing package body <family_support>.
+Parsing VHDL file "E:\Xilinx\13.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\pselect_f.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_f>.
+Parsing architecture <imp> of entity <pselect_f>.
+Parsing VHDL file "E:\Xilinx\13.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\ipif_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <ipif_pkg>.
+Parsing package body <ipif_pkg>.
+Parsing VHDL file "E:\Xilinx\13.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\counter_f.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_f>.
+Parsing architecture <imp> of entity <counter_f>.
+Parsing VHDL file "E:\Xilinx\13.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_lite_ipif_v1_01_a\hdl\vhdl\address_decoder.vhd" into library axi_lite_ipif_v1_01_a
+Parsing entity <address_decoder>.
+Parsing architecture <IMP> of entity <address_decoder>.
+Parsing VHDL file "E:\Xilinx\13.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_lite_ipif_v1_01_a\hdl\vhdl\slave_attachment.vhd" into library axi_lite_ipif_v1_01_a
+Parsing entity <slave_attachment>.
+Parsing architecture <imp> of entity <slave_attachment>.
+Parsing VHDL file "E:\Xilinx\13.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_lite_ipif_v1_01_a\hdl\vhdl\axi_lite_ipif.vhd" into library axi_lite_ipif_v1_01_a
+Parsing entity <axi_lite_ipif>.
+Parsing architecture <imp> of entity <axi_lite_ipif>.
+Parsing VHDL file "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\vhdl\bf_16x16.vhd" into library work
+Parsing entity <bf_16x16>.
+Parsing architecture <IMP> of entity <bf_16x16>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <bf_16x16> (architecture <IMP>) with generics from library <work>.
+
+Elaborating entity <axi_lite_ipif> (architecture <imp>) with generics from library <axi_lite_ipif_v1_01_a>.
+
+Elaborating entity <slave_attachment> (architecture <imp>) with generics from library <axi_lite_ipif_v1_01_a>.
+
+Elaborating entity <address_decoder> (architecture <IMP>) with generics from library <axi_lite_ipif_v1_01_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+INFO:HDLCompiler:679 - "E:\Xilinx\13.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_lite_ipif_v1_01_a\hdl\vhdl\slave_attachment.vhd" Line 412. Case statement is complete. others clause is never selected
+Going to verilog side to elaborate module user_logic
+
+Elaborating module <user_logic(C_NUM_REG=10,C_SLV_DWIDTH=32)>.
+
+Elaborating module <BRAM_0>.
+WARNING:HDLCompiler:1499 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\devl\projnav\ipcore_dir\BRAM_0.v" Line 39: Empty module <BRAM_0> remains a black box.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 754: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 754: Assignment to d0 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 756: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 761: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 761: Assignment to d1 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 763: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 768: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 768: Assignment to d2 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 770: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 775: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 775: Assignment to d3 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 777: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 782: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 782: Assignment to d4 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 784: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 789: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 789: Assignment to d5 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 791: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 796: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 796: Assignment to d6 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 798: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 803: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 803: Assignment to d7 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 805: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 810: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 810: Assignment to d8 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 812: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 817: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 817: Assignment to d9 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 819: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 824: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 824: Assignment to d10 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 826: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 831: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 831: Assignment to d11 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 833: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 838: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 838: Assignment to d12 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 840: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 845: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 845: Assignment to d13 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 847: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 852: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 852: Assignment to d14 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 854: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 859: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 859: Assignment to d15 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\user_logic.v" Line 861: Size mismatch in connection of port <wea>. Formal port size is 1-bit while actual signal size is 32-bit.
+
+Elaborating module <TheProcessingBlock>.
+
+Elaborating module <DATAPATH>.
+
+Elaborating module <CounterBlock>.
+WARNING:HDLCompiler:413 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\DesignCounterBlock.v" Line 64: Result of 3-bit expression is truncated to fit in 2-bit target.
+"E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\DesignCounterBlock.v" Line 81. $display Iteration #0\n
+
+Elaborating module <DRAM_ComputationalBlock>.
+
+Elaborating module <Level1CU>.
+
+Elaborating module <Level2CU>.
+
+Elaborating module <PE>.
+
+Elaborating module <AGU>.
+WARNING:HDLCompiler:413 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\DesignAGU.v" Line 53: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\postgrad\SEECS\Thesis\ShortestPath\Virtex6\Tasks\serial_bf16x16\Design\pcores\bf_16x16_v1_00_a\hdl\verilog\DesignAGU.v" Line 63: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <TheController>.
+Back to vhdl to continue elaboration
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <bf_16x16>.
+    Related source file is "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/vhdl/bf_16x16.vhd".
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+        C_S_AXI_DATA_WIDTH = 32
+        C_S_AXI_ADDR_WIDTH = 32
+        C_S_AXI_MIN_SIZE = "00000000000000000000000111111111"
+        C_USE_WSTRB = 0
+        C_DPHASE_TIMEOUT = 8
+        C_BASEADDR = "11111111111111111111111111111111"
+        C_HIGHADDR = "00000000000000000000000000000000"
+        C_FAMILY = "virtex6"
+        C_NUM_REG = 1
+        C_NUM_MEM = 1
+        C_SLV_AWIDTH = 32
+        C_SLV_DWIDTH = 32
+    Set property "MAX_FANOUT = 10000" for signal <S_AXI_ACLK>.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+    Set property "MAX_FANOUT = 10000" for signal <S_AXI_ARESETN>.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/vhdl/bf_16x16.vhd" line 275: Output port <Bus2IP_Addr> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/vhdl/bf_16x16.vhd" line 275: Output port <Bus2IP_CS> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/vhdl/bf_16x16.vhd" line 275: Output port <Bus2IP_RNW> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <bf_16x16> synthesized.
+
+Synthesizing Unit <axi_lite_ipif>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd".
+        C_S_AXI_DATA_WIDTH = 32
+        C_S_AXI_ADDR_WIDTH = 32
+        C_S_AXI_MIN_SIZE = "00000000000000000000000111111111"
+        C_USE_WSTRB = 0
+        C_DPHASE_TIMEOUT = 8
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011111111111111111111111111111111","0000000000000000000000000000000000000000000000000000000000000000")
+        C_ARD_NUM_CE_ARRAY = (10)
+        C_FAMILY = "virtex6"
+    Summary:
+	no macro.
+Unit <axi_lite_ipif> synthesized.
+
+Synthesizing Unit <slave_attachment>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd".
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011111111111111111111111111111111","0000000000000000000000000000000000000000000000000000000000000000")
+        C_ARD_NUM_CE_ARRAY = (10)
+        C_IPIF_ABUS_WIDTH = 32
+        C_IPIF_DBUS_WIDTH = 32
+        C_S_AXI_MIN_SIZE = "00000000000000000000000111111111"
+        C_USE_WSTRB = 0
+        C_DPHASE_TIMEOUT = 8
+        C_FAMILY = "virtex6"
+WARNING:Xst:647 - Input <S_AXI_AWADDR<31:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_WSTRB<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_ARADDR<31:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd" line 336: Output port <CS_for_gaps> of the instance <I_DECODER> is unconnected or connected to loadless signal.
+    Found 2-bit register for signal <state>.
+    Found 2-bit register for signal <s_axi_rresp_i>.
+    Found 32-bit register for signal <s_axi_rdata_i>.
+    Found 1-bit register for signal <s_axi_rvalid_i>.
+    Found 2-bit register for signal <s_axi_bresp_i>.
+    Found 1-bit register for signal <s_axi_bvalid_i>.
+    Found 4-bit register for signal <INCLUDE_DPHASE_TIMER.dpto_cnt>.
+    Found 1-bit register for signal <rst>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 4                                              |
+    | Clock              | S_AXI_ACLK (rising_edge)                       |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | sm_idle                                        |
+    | Power Up State     | sm_idle                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <INCLUDE_DPHASE_TIMER.dpto_cnt[3]_GND_12_o_add_31_OUT> created at line 502.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <slave_attachment> synthesized.
+
+Synthesizing Unit <address_decoder>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd".
+        C_BUS_AWIDTH = 9
+        C_S_AXI_MIN_SIZE = "00000000000000000000000111111111"
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011111111111111111111111111111111","0000000000000000000000000000000000000000000000000000000000000000")
+        C_ARD_NUM_CE_ARRAY = (10)
+        C_FAMILY = "nofamily"
+WARNING:Xst:647 - Input <Address_In_Erly<0:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus_RNW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <Bus_RNW_reg>.
+    Found 1-bit register for signal <ce_out_i<0>>.
+    Found 1-bit register for signal <ce_out_i<1>>.
+    Found 1-bit register for signal <ce_out_i<2>>.
+    Found 1-bit register for signal <ce_out_i<3>>.
+    Found 1-bit register for signal <ce_out_i<4>>.
+    Found 1-bit register for signal <ce_out_i<5>>.
+    Found 1-bit register for signal <ce_out_i<6>>.
+    Found 1-bit register for signal <ce_out_i<7>>.
+    Found 1-bit register for signal <ce_out_i<8>>.
+    Found 1-bit register for signal <ce_out_i<9>>.
+    Found 1-bit register for signal <cs_out_i>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <address_decoder> synthesized.
+
+Synthesizing Unit <pselect_f_1>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0000"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_1> synthesized.
+
+Synthesizing Unit <pselect_f_2>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0001"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_2> synthesized.
+
+Synthesizing Unit <pselect_f_3>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0010"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_3> synthesized.
+
+Synthesizing Unit <pselect_f_4>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0011"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_4> synthesized.
+
+Synthesizing Unit <pselect_f_5>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0100"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_5> synthesized.
+
+Synthesizing Unit <pselect_f_6>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0101"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_6> synthesized.
+
+Synthesizing Unit <pselect_f_7>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0110"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_7> synthesized.
+
+Synthesizing Unit <pselect_f_8>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0111"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_8> synthesized.
+
+Synthesizing Unit <pselect_f_9>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "1000"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_9> synthesized.
+
+Synthesizing Unit <pselect_f_10>.
+    Related source file is "e:/xilinx/13.2/ise_ds/edk/hw/xilinxprocessoriplib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "1001"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_10> synthesized.
+
+Synthesizing Unit <user_logic>.
+    Related source file is "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v".
+        C_NUM_REG = 10
+        C_SLV_DWIDTH = 32
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 750: Output port <doutb> of the instance <bram_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 757: Output port <doutb> of the instance <bram_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 764: Output port <doutb> of the instance <bram_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 771: Output port <doutb> of the instance <bram_3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 778: Output port <doutb> of the instance <bram_4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 785: Output port <doutb> of the instance <bram_5> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 792: Output port <doutb> of the instance <bram_6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 799: Output port <doutb> of the instance <bram_7> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 806: Output port <doutb> of the instance <bram_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 813: Output port <doutb> of the instance <bram_9> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 820: Output port <doutb> of the instance <bram_10> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 827: Output port <doutb> of the instance <bram_11> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 834: Output port <doutb> of the instance <bram_12> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 841: Output port <doutb> of the instance <bram_13> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 848: Output port <doutb> of the instance <bram_14> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/user_logic.v" line 855: Output port <doutb> of the instance <bram_15> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <slv_reg0<30>>.
+    Found 1-bit register for signal <slv_reg0<29>>.
+    Found 1-bit register for signal <slv_reg0<28>>.
+    Found 1-bit register for signal <slv_reg0<27>>.
+    Found 1-bit register for signal <slv_reg0<26>>.
+    Found 1-bit register for signal <slv_reg0<25>>.
+    Found 1-bit register for signal <slv_reg0<24>>.
+    Found 1-bit register for signal <slv_reg0<23>>.
+    Found 1-bit register for signal <slv_reg0<22>>.
+    Found 1-bit register for signal <slv_reg0<21>>.
+    Found 1-bit register for signal <slv_reg0<20>>.
+    Found 1-bit register for signal <slv_reg0<19>>.
+    Found 1-bit register for signal <slv_reg0<18>>.
+    Found 1-bit register for signal <slv_reg0<17>>.
+    Found 1-bit register for signal <slv_reg0<16>>.
+    Found 1-bit register for signal <slv_reg0<15>>.
+    Found 1-bit register for signal <slv_reg0<14>>.
+    Found 1-bit register for signal <slv_reg0<13>>.
+    Found 1-bit register for signal <slv_reg0<12>>.
+    Found 1-bit register for signal <slv_reg0<11>>.
+    Found 1-bit register for signal <slv_reg0<10>>.
+    Found 1-bit register for signal <slv_reg0<9>>.
+    Found 1-bit register for signal <slv_reg0<8>>.
+    Found 1-bit register for signal <slv_reg0<7>>.
+    Found 1-bit register for signal <slv_reg0<6>>.
+    Found 1-bit register for signal <slv_reg0<5>>.
+    Found 1-bit register for signal <slv_reg0<4>>.
+    Found 1-bit register for signal <slv_reg0<3>>.
+    Found 1-bit register for signal <slv_reg0<2>>.
+    Found 1-bit register for signal <slv_reg0<1>>.
+    Found 1-bit register for signal <slv_reg0<0>>.
+    Found 1-bit register for signal <slv_reg1<31>>.
+    Found 1-bit register for signal <slv_reg1<30>>.
+    Found 1-bit register for signal <slv_reg1<29>>.
+    Found 1-bit register for signal <slv_reg1<28>>.
+    Found 1-bit register for signal <slv_reg1<27>>.
+    Found 1-bit register for signal <slv_reg1<26>>.
+    Found 1-bit register for signal <slv_reg1<25>>.
+    Found 1-bit register for signal <slv_reg1<24>>.
+    Found 1-bit register for signal <slv_reg1<23>>.
+    Found 1-bit register for signal <slv_reg1<22>>.
+    Found 1-bit register for signal <slv_reg1<21>>.
+    Found 1-bit register for signal <slv_reg1<20>>.
+    Found 1-bit register for signal <slv_reg1<19>>.
+    Found 1-bit register for signal <slv_reg1<18>>.
+    Found 1-bit register for signal <slv_reg1<17>>.
+    Found 1-bit register for signal <slv_reg1<16>>.
+    Found 1-bit register for signal <slv_reg1<15>>.
+    Found 1-bit register for signal <slv_reg1<14>>.
+    Found 1-bit register for signal <slv_reg1<13>>.
+    Found 1-bit register for signal <slv_reg1<12>>.
+    Found 1-bit register for signal <slv_reg1<11>>.
+    Found 1-bit register for signal <slv_reg1<10>>.
+    Found 1-bit register for signal <slv_reg1<9>>.
+    Found 1-bit register for signal <slv_reg1<8>>.
+    Found 1-bit register for signal <slv_reg1<7>>.
+    Found 1-bit register for signal <slv_reg1<6>>.
+    Found 1-bit register for signal <slv_reg1<5>>.
+    Found 1-bit register for signal <slv_reg1<4>>.
+    Found 1-bit register for signal <slv_reg1<3>>.
+    Found 1-bit register for signal <slv_reg1<2>>.
+    Found 1-bit register for signal <slv_reg1<1>>.
+    Found 1-bit register for signal <slv_reg1<0>>.
+    Found 1-bit register for signal <slv_reg3<31>>.
+    Found 1-bit register for signal <slv_reg3<30>>.
+    Found 1-bit register for signal <slv_reg3<29>>.
+    Found 1-bit register for signal <slv_reg3<28>>.
+    Found 1-bit register for signal <slv_reg3<27>>.
+    Found 1-bit register for signal <slv_reg3<26>>.
+    Found 1-bit register for signal <slv_reg3<25>>.
+    Found 1-bit register for signal <slv_reg3<24>>.
+    Found 1-bit register for signal <slv_reg3<23>>.
+    Found 1-bit register for signal <slv_reg3<22>>.
+    Found 1-bit register for signal <slv_reg3<21>>.
+    Found 1-bit register for signal <slv_reg3<20>>.
+    Found 1-bit register for signal <slv_reg3<19>>.
+    Found 1-bit register for signal <slv_reg3<18>>.
+    Found 1-bit register for signal <slv_reg3<17>>.
+    Found 1-bit register for signal <slv_reg3<16>>.
+    Found 1-bit register for signal <slv_reg3<15>>.
+    Found 1-bit register for signal <slv_reg3<14>>.
+    Found 1-bit register for signal <slv_reg3<13>>.
+    Found 1-bit register for signal <slv_reg3<12>>.
+    Found 1-bit register for signal <slv_reg3<11>>.
+    Found 1-bit register for signal <slv_reg3<10>>.
+    Found 1-bit register for signal <slv_reg3<9>>.
+    Found 1-bit register for signal <slv_reg3<8>>.
+    Found 1-bit register for signal <slv_reg3<7>>.
+    Found 1-bit register for signal <slv_reg3<6>>.
+    Found 1-bit register for signal <slv_reg3<5>>.
+    Found 1-bit register for signal <slv_reg3<4>>.
+    Found 1-bit register for signal <slv_reg3<3>>.
+    Found 1-bit register for signal <slv_reg3<2>>.
+    Found 1-bit register for signal <slv_reg3<1>>.
+    Found 1-bit register for signal <slv_reg3<0>>.
+    Found 1-bit register for signal <slv_reg6<31>>.
+    Found 1-bit register for signal <slv_reg6<30>>.
+    Found 1-bit register for signal <slv_reg6<29>>.
+    Found 1-bit register for signal <slv_reg6<28>>.
+    Found 1-bit register for signal <slv_reg6<27>>.
+    Found 1-bit register for signal <slv_reg6<26>>.
+    Found 1-bit register for signal <slv_reg6<25>>.
+    Found 1-bit register for signal <slv_reg6<24>>.
+    Found 1-bit register for signal <slv_reg6<23>>.
+    Found 1-bit register for signal <slv_reg6<22>>.
+    Found 1-bit register for signal <slv_reg6<21>>.
+    Found 1-bit register for signal <slv_reg6<20>>.
+    Found 1-bit register for signal <slv_reg6<19>>.
+    Found 1-bit register for signal <slv_reg6<18>>.
+    Found 1-bit register for signal <slv_reg6<17>>.
+    Found 1-bit register for signal <slv_reg6<16>>.
+    Found 1-bit register for signal <slv_reg6<15>>.
+    Found 1-bit register for signal <slv_reg6<14>>.
+    Found 1-bit register for signal <slv_reg6<13>>.
+    Found 1-bit register for signal <slv_reg6<12>>.
+    Found 1-bit register for signal <slv_reg6<11>>.
+    Found 1-bit register for signal <slv_reg6<10>>.
+    Found 1-bit register for signal <slv_reg6<9>>.
+    Found 1-bit register for signal <slv_reg6<8>>.
+    Found 1-bit register for signal <slv_reg6<7>>.
+    Found 1-bit register for signal <slv_reg6<6>>.
+    Found 1-bit register for signal <slv_reg6<5>>.
+    Found 1-bit register for signal <slv_reg6<4>>.
+    Found 1-bit register for signal <slv_reg6<3>>.
+    Found 1-bit register for signal <slv_reg6<2>>.
+    Found 1-bit register for signal <slv_reg6<1>>.
+    Found 1-bit register for signal <slv_reg6<0>>.
+    Found 1-bit register for signal <slv_reg7<31>>.
+    Found 1-bit register for signal <slv_reg7<30>>.
+    Found 1-bit register for signal <slv_reg7<29>>.
+    Found 1-bit register for signal <slv_reg7<28>>.
+    Found 1-bit register for signal <slv_reg7<27>>.
+    Found 1-bit register for signal <slv_reg7<26>>.
+    Found 1-bit register for signal <slv_reg7<25>>.
+    Found 1-bit register for signal <slv_reg7<24>>.
+    Found 1-bit register for signal <slv_reg7<23>>.
+    Found 1-bit register for signal <slv_reg7<22>>.
+    Found 1-bit register for signal <slv_reg7<21>>.
+    Found 1-bit register for signal <slv_reg7<20>>.
+    Found 1-bit register for signal <slv_reg7<19>>.
+    Found 1-bit register for signal <slv_reg7<18>>.
+    Found 1-bit register for signal <slv_reg7<17>>.
+    Found 1-bit register for signal <slv_reg7<16>>.
+    Found 1-bit register for signal <slv_reg7<15>>.
+    Found 1-bit register for signal <slv_reg7<14>>.
+    Found 1-bit register for signal <slv_reg7<13>>.
+    Found 1-bit register for signal <slv_reg7<12>>.
+    Found 1-bit register for signal <slv_reg7<11>>.
+    Found 1-bit register for signal <slv_reg7<10>>.
+    Found 1-bit register for signal <slv_reg7<9>>.
+    Found 1-bit register for signal <slv_reg7<8>>.
+    Found 1-bit register for signal <slv_reg7<7>>.
+    Found 1-bit register for signal <slv_reg7<6>>.
+    Found 1-bit register for signal <slv_reg7<5>>.
+    Found 1-bit register for signal <slv_reg7<4>>.
+    Found 1-bit register for signal <slv_reg7<3>>.
+    Found 1-bit register for signal <slv_reg7<2>>.
+    Found 1-bit register for signal <slv_reg7<1>>.
+    Found 1-bit register for signal <slv_reg7<0>>.
+    Found 1-bit register for signal <slv_reg8<31>>.
+    Found 1-bit register for signal <slv_reg8<30>>.
+    Found 1-bit register for signal <slv_reg8<29>>.
+    Found 1-bit register for signal <slv_reg8<28>>.
+    Found 1-bit register for signal <slv_reg8<27>>.
+    Found 1-bit register for signal <slv_reg8<26>>.
+    Found 1-bit register for signal <slv_reg8<25>>.
+    Found 1-bit register for signal <slv_reg8<24>>.
+    Found 1-bit register for signal <slv_reg8<23>>.
+    Found 1-bit register for signal <slv_reg8<22>>.
+    Found 1-bit register for signal <slv_reg8<21>>.
+    Found 1-bit register for signal <slv_reg8<20>>.
+    Found 1-bit register for signal <slv_reg8<19>>.
+    Found 1-bit register for signal <slv_reg8<18>>.
+    Found 1-bit register for signal <slv_reg8<17>>.
+    Found 1-bit register for signal <slv_reg8<16>>.
+    Found 1-bit register for signal <slv_reg8<15>>.
+    Found 1-bit register for signal <slv_reg8<14>>.
+    Found 1-bit register for signal <slv_reg8<13>>.
+    Found 1-bit register for signal <slv_reg8<12>>.
+    Found 1-bit register for signal <slv_reg8<11>>.
+    Found 1-bit register for signal <slv_reg8<10>>.
+    Found 1-bit register for signal <slv_reg8<9>>.
+    Found 1-bit register for signal <slv_reg8<8>>.
+    Found 1-bit register for signal <slv_reg8<7>>.
+    Found 1-bit register for signal <slv_reg8<6>>.
+    Found 1-bit register for signal <slv_reg8<5>>.
+    Found 1-bit register for signal <slv_reg8<4>>.
+    Found 1-bit register for signal <slv_reg8<3>>.
+    Found 1-bit register for signal <slv_reg8<2>>.
+    Found 1-bit register for signal <slv_reg8<1>>.
+    Found 1-bit register for signal <slv_reg8<0>>.
+    Found 1-bit register for signal <slv_reg9<31>>.
+    Found 1-bit register for signal <slv_reg9<30>>.
+    Found 1-bit register for signal <slv_reg9<29>>.
+    Found 1-bit register for signal <slv_reg9<28>>.
+    Found 1-bit register for signal <slv_reg9<27>>.
+    Found 1-bit register for signal <slv_reg9<26>>.
+    Found 1-bit register for signal <slv_reg9<25>>.
+    Found 1-bit register for signal <slv_reg9<24>>.
+    Found 1-bit register for signal <slv_reg9<23>>.
+    Found 1-bit register for signal <slv_reg9<22>>.
+    Found 1-bit register for signal <slv_reg9<21>>.
+    Found 1-bit register for signal <slv_reg9<20>>.
+    Found 1-bit register for signal <slv_reg9<19>>.
+    Found 1-bit register for signal <slv_reg9<18>>.
+    Found 1-bit register for signal <slv_reg9<17>>.
+    Found 1-bit register for signal <slv_reg9<16>>.
+    Found 1-bit register for signal <slv_reg9<15>>.
+    Found 1-bit register for signal <slv_reg9<14>>.
+    Found 1-bit register for signal <slv_reg9<13>>.
+    Found 1-bit register for signal <slv_reg9<12>>.
+    Found 1-bit register for signal <slv_reg9<11>>.
+    Found 1-bit register for signal <slv_reg9<10>>.
+    Found 1-bit register for signal <slv_reg9<9>>.
+    Found 1-bit register for signal <slv_reg9<8>>.
+    Found 1-bit register for signal <slv_reg9<7>>.
+    Found 1-bit register for signal <slv_reg9<6>>.
+    Found 1-bit register for signal <slv_reg9<5>>.
+    Found 1-bit register for signal <slv_reg9<4>>.
+    Found 1-bit register for signal <slv_reg9<3>>.
+    Found 1-bit register for signal <slv_reg9<2>>.
+    Found 1-bit register for signal <slv_reg9<1>>.
+    Found 1-bit register for signal <slv_reg9<0>>.
+    Found 1-bit register for signal <mb_start>.
+    Found 32-bit register for signal <slv_reg2>.
+    Found 32-bit register for signal <slv_reg4>.
+    Found 32-bit register for signal <slv_reg5>.
+    Found 1-bit register for signal <slv_reg0<31>>.
+    Found 32-bit 16-to-1 multiplexer for signal <_n1353> created at line 315.
+    Summary:
+	inferred 321 D-type flip-flop(s).
+	inferred 284 Multiplexer(s).
+Unit <user_logic> synthesized.
+
+Synthesizing Unit <TheProcessingBlock>.
+    Related source file is "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/theprocessingblock.v".
+    Summary:
+	no macro.
+Unit <TheProcessingBlock> synthesized.
+
+Synthesizing Unit <DATAPATH>.
+    Related source file is "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/datapath.v".
+    Summary:
+	no macro.
+Unit <DATAPATH> synthesized.
+
+Synthesizing Unit <CounterBlock>.
+    Related source file is "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/designcounterblock.v".
+    Found 2-bit register for signal <step_counter>.
+    Found 1-bit register for signal <cmpout_phase_counter>.
+    Found 11-bit register for signal <iteration_counter>.
+    Found 1-bit register for signal <rollover_phase_counter>.
+    Found 1-bit register for signal <read_enable_global_reg>.
+    Found 2-bit adder for signal <step_counter[1]_GND_29_o_add_5_OUT> created at line 64.
+    Found 1-bit adder for signal <phase_counter_enable_phase_counter_add_9_OUT<0>> created at line 72.
+    Found 11-bit adder for signal <iteration_counter[10]_GND_29_o_add_11_OUT> created at line 80.
+    Found 11-bit comparator lessequal for signal <n0002> created at line 34
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <CounterBlock> synthesized.
+
+Synthesizing Unit <DRAM_ComputationalBlock>.
+    Related source file is "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/designdram_computationalblock.v".
+        n = 16
+    Found 1-bit register for signal <dram1<0><31>>.
+    Found 1-bit register for signal <dram1<0><30>>.
+    Found 1-bit register for signal <dram1<0><29>>.
+    Found 1-bit register for signal <dram1<0><28>>.
+    Found 1-bit register for signal <dram1<0><27>>.
+    Found 1-bit register for signal <dram1<0><26>>.
+    Found 1-bit register for signal <dram1<0><25>>.
+    Found 1-bit register for signal <dram1<0><24>>.
+    Found 1-bit register for signal <dram1<0><23>>.
+    Found 1-bit register for signal <dram1<0><22>>.
+    Found 1-bit register for signal <dram1<0><21>>.
+    Found 1-bit register for signal <dram1<0><20>>.
+    Found 1-bit register for signal <dram1<0><19>>.
+    Found 1-bit register for signal <dram1<0><18>>.
+    Found 1-bit register for signal <dram1<0><17>>.
+    Found 1-bit register for signal <dram1<0><16>>.
+    Found 1-bit register for signal <dram1<0><15>>.
+    Found 1-bit register for signal <dram1<0><14>>.
+    Found 1-bit register for signal <dram1<0><13>>.
+    Found 1-bit register for signal <dram1<0><12>>.
+    Found 1-bit register for signal <dram1<0><11>>.
+    Found 1-bit register for signal <dram1<0><10>>.
+    Found 1-bit register for signal <dram1<0><9>>.
+    Found 1-bit register for signal <dram1<0><8>>.
+    Found 1-bit register for signal <dram1<0><7>>.
+    Found 1-bit register for signal <dram1<0><6>>.
+    Found 1-bit register for signal <dram1<0><5>>.
+    Found 1-bit register for signal <dram1<0><4>>.
+    Found 1-bit register for signal <dram1<0><3>>.
+    Found 1-bit register for signal <dram1<0><2>>.
+    Found 1-bit register for signal <dram1<0><1>>.
+    Found 1-bit register for signal <dram1<0><0>>.
+    Found 1-bit register for signal <dram1<1><31>>.
+    Found 1-bit register for signal <dram1<1><30>>.
+    Found 1-bit register for signal <dram1<1><29>>.
+    Found 1-bit register for signal <dram1<1><28>>.
+    Found 1-bit register for signal <dram1<1><27>>.
+    Found 1-bit register for signal <dram1<1><26>>.
+    Found 1-bit register for signal <dram1<1><25>>.
+    Found 1-bit register for signal <dram1<1><24>>.
+    Found 1-bit register for signal <dram1<1><23>>.
+    Found 1-bit register for signal <dram1<1><22>>.
+    Found 1-bit register for signal <dram1<1><21>>.
+    Found 1-bit register for signal <dram1<1><20>>.
+    Found 1-bit register for signal <dram1<1><19>>.
+    Found 1-bit register for signal <dram1<1><18>>.
+    Found 1-bit register for signal <dram1<1><17>>.
+    Found 1-bit register for signal <dram1<1><16>>.
+    Found 1-bit register for signal <dram1<1><15>>.
+    Found 1-bit register for signal <dram1<1><14>>.
+    Found 1-bit register for signal <dram1<1><13>>.
+    Found 1-bit register for signal <dram1<1><12>>.
+    Found 1-bit register for signal <dram1<1><11>>.
+    Found 1-bit register for signal <dram1<1><10>>.
+    Found 1-bit register for signal <dram1<1><9>>.
+    Found 1-bit register for signal <dram1<1><8>>.
+    Found 1-bit register for signal <dram1<1><7>>.
+    Found 1-bit register for signal <dram1<1><6>>.
+    Found 1-bit register for signal <dram1<1><5>>.
+    Found 1-bit register for signal <dram1<1><4>>.
+    Found 1-bit register for signal <dram1<1><3>>.
+    Found 1-bit register for signal <dram1<1><2>>.
+    Found 1-bit register for signal <dram1<1><1>>.
+    Found 1-bit register for signal <dram1<1><0>>.
+    Found 1-bit register for signal <dram1<2><31>>.
+    Found 1-bit register for signal <dram1<2><30>>.
+    Found 1-bit register for signal <dram1<2><29>>.
+    Found 1-bit register for signal <dram1<2><28>>.
+    Found 1-bit register for signal <dram1<2><27>>.
+    Found 1-bit register for signal <dram1<2><26>>.
+    Found 1-bit register for signal <dram1<2><25>>.
+    Found 1-bit register for signal <dram1<2><24>>.
+    Found 1-bit register for signal <dram1<2><23>>.
+    Found 1-bit register for signal <dram1<2><22>>.
+    Found 1-bit register for signal <dram1<2><21>>.
+    Found 1-bit register for signal <dram1<2><20>>.
+    Found 1-bit register for signal <dram1<2><19>>.
+    Found 1-bit register for signal <dram1<2><18>>.
+    Found 1-bit register for signal <dram1<2><17>>.
+    Found 1-bit register for signal <dram1<2><16>>.
+    Found 1-bit register for signal <dram1<2><15>>.
+    Found 1-bit register for signal <dram1<2><14>>.
+    Found 1-bit register for signal <dram1<2><13>>.
+    Found 1-bit register for signal <dram1<2><12>>.
+    Found 1-bit register for signal <dram1<2><11>>.
+    Found 1-bit register for signal <dram1<2><10>>.
+    Found 1-bit register for signal <dram1<2><9>>.
+    Found 1-bit register for signal <dram1<2><8>>.
+    Found 1-bit register for signal <dram1<2><7>>.
+    Found 1-bit register for signal <dram1<2><6>>.
+    Found 1-bit register for signal <dram1<2><5>>.
+    Found 1-bit register for signal <dram1<2><4>>.
+    Found 1-bit register for signal <dram1<2><3>>.
+    Found 1-bit register for signal <dram1<2><2>>.
+    Found 1-bit register for signal <dram1<2><1>>.
+    Found 1-bit register for signal <dram1<2><0>>.
+    Found 1-bit register for signal <dram1<3><31>>.
+    Found 1-bit register for signal <dram1<3><30>>.
+    Found 1-bit register for signal <dram1<3><29>>.
+    Found 1-bit register for signal <dram1<3><28>>.
+    Found 1-bit register for signal <dram1<3><27>>.
+    Found 1-bit register for signal <dram1<3><26>>.
+    Found 1-bit register for signal <dram1<3><25>>.
+    Found 1-bit register for signal <dram1<3><24>>.
+    Found 1-bit register for signal <dram1<3><23>>.
+    Found 1-bit register for signal <dram1<3><22>>.
+    Found 1-bit register for signal <dram1<3><21>>.
+    Found 1-bit register for signal <dram1<3><20>>.
+    Found 1-bit register for signal <dram1<3><19>>.
+    Found 1-bit register for signal <dram1<3><18>>.
+    Found 1-bit register for signal <dram1<3><17>>.
+    Found 1-bit register for signal <dram1<3><16>>.
+    Found 1-bit register for signal <dram1<3><15>>.
+    Found 1-bit register for signal <dram1<3><14>>.
+    Found 1-bit register for signal <dram1<3><13>>.
+    Found 1-bit register for signal <dram1<3><12>>.
+    Found 1-bit register for signal <dram1<3><11>>.
+    Found 1-bit register for signal <dram1<3><10>>.
+    Found 1-bit register for signal <dram1<3><9>>.
+    Found 1-bit register for signal <dram1<3><8>>.
+    Found 1-bit register for signal <dram1<3><7>>.
+    Found 1-bit register for signal <dram1<3><6>>.
+    Found 1-bit register for signal <dram1<3><5>>.
+    Found 1-bit register for signal <dram1<3><4>>.
+    Found 1-bit register for signal <dram1<3><3>>.
+    Found 1-bit register for signal <dram1<3><2>>.
+    Found 1-bit register for signal <dram1<3><1>>.
+    Found 1-bit register for signal <dram1<3><0>>.
+    Found 1-bit register for signal <dram1<4><31>>.
+    Found 1-bit register for signal <dram1<4><30>>.
+    Found 1-bit register for signal <dram1<4><29>>.
+    Found 1-bit register for signal <dram1<4><28>>.
+    Found 1-bit register for signal <dram1<4><27>>.
+    Found 1-bit register for signal <dram1<4><26>>.
+    Found 1-bit register for signal <dram1<4><25>>.
+    Found 1-bit register for signal <dram1<4><24>>.
+    Found 1-bit register for signal <dram1<4><23>>.
+    Found 1-bit register for signal <dram1<4><22>>.
+    Found 1-bit register for signal <dram1<4><21>>.
+    Found 1-bit register for signal <dram1<4><20>>.
+    Found 1-bit register for signal <dram1<4><19>>.
+    Found 1-bit register for signal <dram1<4><18>>.
+    Found 1-bit register for signal <dram1<4><17>>.
+    Found 1-bit register for signal <dram1<4><16>>.
+    Found 1-bit register for signal <dram1<4><15>>.
+    Found 1-bit register for signal <dram1<4><14>>.
+    Found 1-bit register for signal <dram1<4><13>>.
+    Found 1-bit register for signal <dram1<4><12>>.
+    Found 1-bit register for signal <dram1<4><11>>.
+    Found 1-bit register for signal <dram1<4><10>>.
+    Found 1-bit register for signal <dram1<4><9>>.
+    Found 1-bit register for signal <dram1<4><8>>.
+    Found 1-bit register for signal <dram1<4><7>>.
+    Found 1-bit register for signal <dram1<4><6>>.
+    Found 1-bit register for signal <dram1<4><5>>.
+    Found 1-bit register for signal <dram1<4><4>>.
+    Found 1-bit register for signal <dram1<4><3>>.
+    Found 1-bit register for signal <dram1<4><2>>.
+    Found 1-bit register for signal <dram1<4><1>>.
+    Found 1-bit register for signal <dram1<4><0>>.
+    Found 1-bit register for signal <dram1<5><31>>.
+    Found 1-bit register for signal <dram1<5><30>>.
+    Found 1-bit register for signal <dram1<5><29>>.
+    Found 1-bit register for signal <dram1<5><28>>.
+    Found 1-bit register for signal <dram1<5><27>>.
+    Found 1-bit register for signal <dram1<5><26>>.
+    Found 1-bit register for signal <dram1<5><25>>.
+    Found 1-bit register for signal <dram1<5><24>>.
+    Found 1-bit register for signal <dram1<5><23>>.
+    Found 1-bit register for signal <dram1<5><22>>.
+    Found 1-bit register for signal <dram1<5><21>>.
+    Found 1-bit register for signal <dram1<5><20>>.
+    Found 1-bit register for signal <dram1<5><19>>.
+    Found 1-bit register for signal <dram1<5><18>>.
+    Found 1-bit register for signal <dram1<5><17>>.
+    Found 1-bit register for signal <dram1<5><16>>.
+    Found 1-bit register for signal <dram1<5><15>>.
+    Found 1-bit register for signal <dram1<5><14>>.
+    Found 1-bit register for signal <dram1<5><13>>.
+    Found 1-bit register for signal <dram1<5><12>>.
+    Found 1-bit register for signal <dram1<5><11>>.
+    Found 1-bit register for signal <dram1<5><10>>.
+    Found 1-bit register for signal <dram1<5><9>>.
+    Found 1-bit register for signal <dram1<5><8>>.
+    Found 1-bit register for signal <dram1<5><7>>.
+    Found 1-bit register for signal <dram1<5><6>>.
+    Found 1-bit register for signal <dram1<5><5>>.
+    Found 1-bit register for signal <dram1<5><4>>.
+    Found 1-bit register for signal <dram1<5><3>>.
+    Found 1-bit register for signal <dram1<5><2>>.
+    Found 1-bit register for signal <dram1<5><1>>.
+    Found 1-bit register for signal <dram1<5><0>>.
+    Found 1-bit register for signal <dram1<6><31>>.
+    Found 1-bit register for signal <dram1<6><30>>.
+    Found 1-bit register for signal <dram1<6><29>>.
+    Found 1-bit register for signal <dram1<6><28>>.
+    Found 1-bit register for signal <dram1<6><27>>.
+    Found 1-bit register for signal <dram1<6><26>>.
+    Found 1-bit register for signal <dram1<6><25>>.
+    Found 1-bit register for signal <dram1<6><24>>.
+    Found 1-bit register for signal <dram1<6><23>>.
+    Found 1-bit register for signal <dram1<6><22>>.
+    Found 1-bit register for signal <dram1<6><21>>.
+    Found 1-bit register for signal <dram1<6><20>>.
+    Found 1-bit register for signal <dram1<6><19>>.
+    Found 1-bit register for signal <dram1<6><18>>.
+    Found 1-bit register for signal <dram1<6><17>>.
+    Found 1-bit register for signal <dram1<6><16>>.
+    Found 1-bit register for signal <dram1<6><15>>.
+    Found 1-bit register for signal <dram1<6><14>>.
+    Found 1-bit register for signal <dram1<6><13>>.
+    Found 1-bit register for signal <dram1<6><12>>.
+    Found 1-bit register for signal <dram1<6><11>>.
+    Found 1-bit register for signal <dram1<6><10>>.
+    Found 1-bit register for signal <dram1<6><9>>.
+    Found 1-bit register for signal <dram1<6><8>>.
+    Found 1-bit register for signal <dram1<6><7>>.
+    Found 1-bit register for signal <dram1<6><6>>.
+    Found 1-bit register for signal <dram1<6><5>>.
+    Found 1-bit register for signal <dram1<6><4>>.
+    Found 1-bit register for signal <dram1<6><3>>.
+    Found 1-bit register for signal <dram1<6><2>>.
+    Found 1-bit register for signal <dram1<6><1>>.
+    Found 1-bit register for signal <dram1<6><0>>.
+    Found 1-bit register for signal <dram1<7><31>>.
+    Found 1-bit register for signal <dram1<7><30>>.
+    Found 1-bit register for signal <dram1<7><29>>.
+    Found 1-bit register for signal <dram1<7><28>>.
+    Found 1-bit register for signal <dram1<7><27>>.
+    Found 1-bit register for signal <dram1<7><26>>.
+    Found 1-bit register for signal <dram1<7><25>>.
+    Found 1-bit register for signal <dram1<7><24>>.
+    Found 1-bit register for signal <dram1<7><23>>.
+    Found 1-bit register for signal <dram1<7><22>>.
+    Found 1-bit register for signal <dram1<7><21>>.
+    Found 1-bit register for signal <dram1<7><20>>.
+    Found 1-bit register for signal <dram1<7><19>>.
+    Found 1-bit register for signal <dram1<7><18>>.
+    Found 1-bit register for signal <dram1<7><17>>.
+    Found 1-bit register for signal <dram1<7><16>>.
+    Found 1-bit register for signal <dram1<7><15>>.
+    Found 1-bit register for signal <dram1<7><14>>.
+    Found 1-bit register for signal <dram1<7><13>>.
+    Found 1-bit register for signal <dram1<7><12>>.
+    Found 1-bit register for signal <dram1<7><11>>.
+    Found 1-bit register for signal <dram1<7><10>>.
+    Found 1-bit register for signal <dram1<7><9>>.
+    Found 1-bit register for signal <dram1<7><8>>.
+    Found 1-bit register for signal <dram1<7><7>>.
+    Found 1-bit register for signal <dram1<7><6>>.
+    Found 1-bit register for signal <dram1<7><5>>.
+    Found 1-bit register for signal <dram1<7><4>>.
+    Found 1-bit register for signal <dram1<7><3>>.
+    Found 1-bit register for signal <dram1<7><2>>.
+    Found 1-bit register for signal <dram1<7><1>>.
+    Found 1-bit register for signal <dram1<7><0>>.
+    Found 1-bit register for signal <dram1<8><31>>.
+    Found 1-bit register for signal <dram1<8><30>>.
+    Found 1-bit register for signal <dram1<8><29>>.
+    Found 1-bit register for signal <dram1<8><28>>.
+    Found 1-bit register for signal <dram1<8><27>>.
+    Found 1-bit register for signal <dram1<8><26>>.
+    Found 1-bit register for signal <dram1<8><25>>.
+    Found 1-bit register for signal <dram1<8><24>>.
+    Found 1-bit register for signal <dram1<8><23>>.
+    Found 1-bit register for signal <dram1<8><22>>.
+    Found 1-bit register for signal <dram1<8><21>>.
+    Found 1-bit register for signal <dram1<8><20>>.
+    Found 1-bit register for signal <dram1<8><19>>.
+    Found 1-bit register for signal <dram1<8><18>>.
+    Found 1-bit register for signal <dram1<8><17>>.
+    Found 1-bit register for signal <dram1<8><16>>.
+    Found 1-bit register for signal <dram1<8><15>>.
+    Found 1-bit register for signal <dram1<8><14>>.
+    Found 1-bit register for signal <dram1<8><13>>.
+    Found 1-bit register for signal <dram1<8><12>>.
+    Found 1-bit register for signal <dram1<8><11>>.
+    Found 1-bit register for signal <dram1<8><10>>.
+    Found 1-bit register for signal <dram1<8><9>>.
+    Found 1-bit register for signal <dram1<8><8>>.
+    Found 1-bit register for signal <dram1<8><7>>.
+    Found 1-bit register for signal <dram1<8><6>>.
+    Found 1-bit register for signal <dram1<8><5>>.
+    Found 1-bit register for signal <dram1<8><4>>.
+    Found 1-bit register for signal <dram1<8><3>>.
+    Found 1-bit register for signal <dram1<8><2>>.
+    Found 1-bit register for signal <dram1<8><1>>.
+    Found 1-bit register for signal <dram1<8><0>>.
+    Found 1-bit register for signal <dram1<9><31>>.
+    Found 1-bit register for signal <dram1<9><30>>.
+    Found 1-bit register for signal <dram1<9><29>>.
+    Found 1-bit register for signal <dram1<9><28>>.
+    Found 1-bit register for signal <dram1<9><27>>.
+    Found 1-bit register for signal <dram1<9><26>>.
+    Found 1-bit register for signal <dram1<9><25>>.
+    Found 1-bit register for signal <dram1<9><24>>.
+    Found 1-bit register for signal <dram1<9><23>>.
+    Found 1-bit register for signal <dram1<9><22>>.
+    Found 1-bit register for signal <dram1<9><21>>.
+    Found 1-bit register for signal <dram1<9><20>>.
+    Found 1-bit register for signal <dram1<9><19>>.
+    Found 1-bit register for signal <dram1<9><18>>.
+    Found 1-bit register for signal <dram1<9><17>>.
+    Found 1-bit register for signal <dram1<9><16>>.
+    Found 1-bit register for signal <dram1<9><15>>.
+    Found 1-bit register for signal <dram1<9><14>>.
+    Found 1-bit register for signal <dram1<9><13>>.
+    Found 1-bit register for signal <dram1<9><12>>.
+    Found 1-bit register for signal <dram1<9><11>>.
+    Found 1-bit register for signal <dram1<9><10>>.
+    Found 1-bit register for signal <dram1<9><9>>.
+    Found 1-bit register for signal <dram1<9><8>>.
+    Found 1-bit register for signal <dram1<9><7>>.
+    Found 1-bit register for signal <dram1<9><6>>.
+    Found 1-bit register for signal <dram1<9><5>>.
+    Found 1-bit register for signal <dram1<9><4>>.
+    Found 1-bit register for signal <dram1<9><3>>.
+    Found 1-bit register for signal <dram1<9><2>>.
+    Found 1-bit register for signal <dram1<9><1>>.
+    Found 1-bit register for signal <dram1<9><0>>.
+    Found 1-bit register for signal <dram1<10><31>>.
+    Found 1-bit register for signal <dram1<10><30>>.
+    Found 1-bit register for signal <dram1<10><29>>.
+    Found 1-bit register for signal <dram1<10><28>>.
+    Found 1-bit register for signal <dram1<10><27>>.
+    Found 1-bit register for signal <dram1<10><26>>.
+    Found 1-bit register for signal <dram1<10><25>>.
+    Found 1-bit register for signal <dram1<10><24>>.
+    Found 1-bit register for signal <dram1<10><23>>.
+    Found 1-bit register for signal <dram1<10><22>>.
+    Found 1-bit register for signal <dram1<10><21>>.
+    Found 1-bit register for signal <dram1<10><20>>.
+    Found 1-bit register for signal <dram1<10><19>>.
+    Found 1-bit register for signal <dram1<10><18>>.
+    Found 1-bit register for signal <dram1<10><17>>.
+    Found 1-bit register for signal <dram1<10><16>>.
+    Found 1-bit register for signal <dram1<10><15>>.
+    Found 1-bit register for signal <dram1<10><14>>.
+    Found 1-bit register for signal <dram1<10><13>>.
+    Found 1-bit register for signal <dram1<10><12>>.
+    Found 1-bit register for signal <dram1<10><11>>.
+    Found 1-bit register for signal <dram1<10><10>>.
+    Found 1-bit register for signal <dram1<10><9>>.
+    Found 1-bit register for signal <dram1<10><8>>.
+    Found 1-bit register for signal <dram1<10><7>>.
+    Found 1-bit register for signal <dram1<10><6>>.
+    Found 1-bit register for signal <dram1<10><5>>.
+    Found 1-bit register for signal <dram1<10><4>>.
+    Found 1-bit register for signal <dram1<10><3>>.
+    Found 1-bit register for signal <dram1<10><2>>.
+    Found 1-bit register for signal <dram1<10><1>>.
+    Found 1-bit register for signal <dram1<10><0>>.
+    Found 1-bit register for signal <dram1<11><31>>.
+    Found 1-bit register for signal <dram1<11><30>>.
+    Found 1-bit register for signal <dram1<11><29>>.
+    Found 1-bit register for signal <dram1<11><28>>.
+    Found 1-bit register for signal <dram1<11><27>>.
+    Found 1-bit register for signal <dram1<11><26>>.
+    Found 1-bit register for signal <dram1<11><25>>.
+    Found 1-bit register for signal <dram1<11><24>>.
+    Found 1-bit register for signal <dram1<11><23>>.
+    Found 1-bit register for signal <dram1<11><22>>.
+    Found 1-bit register for signal <dram1<11><21>>.
+    Found 1-bit register for signal <dram1<11><20>>.
+    Found 1-bit register for signal <dram1<11><19>>.
+    Found 1-bit register for signal <dram1<11><18>>.
+    Found 1-bit register for signal <dram1<11><17>>.
+    Found 1-bit register for signal <dram1<11><16>>.
+    Found 1-bit register for signal <dram1<11><15>>.
+    Found 1-bit register for signal <dram1<11><14>>.
+    Found 1-bit register for signal <dram1<11><13>>.
+    Found 1-bit register for signal <dram1<11><12>>.
+    Found 1-bit register for signal <dram1<11><11>>.
+    Found 1-bit register for signal <dram1<11><10>>.
+    Found 1-bit register for signal <dram1<11><9>>.
+    Found 1-bit register for signal <dram1<11><8>>.
+    Found 1-bit register for signal <dram1<11><7>>.
+    Found 1-bit register for signal <dram1<11><6>>.
+    Found 1-bit register for signal <dram1<11><5>>.
+    Found 1-bit register for signal <dram1<11><4>>.
+    Found 1-bit register for signal <dram1<11><3>>.
+    Found 1-bit register for signal <dram1<11><2>>.
+    Found 1-bit register for signal <dram1<11><1>>.
+    Found 1-bit register for signal <dram1<11><0>>.
+    Found 1-bit register for signal <dram1<12><31>>.
+    Found 1-bit register for signal <dram1<12><30>>.
+    Found 1-bit register for signal <dram1<12><29>>.
+    Found 1-bit register for signal <dram1<12><28>>.
+    Found 1-bit register for signal <dram1<12><27>>.
+    Found 1-bit register for signal <dram1<12><26>>.
+    Found 1-bit register for signal <dram1<12><25>>.
+    Found 1-bit register for signal <dram1<12><24>>.
+    Found 1-bit register for signal <dram1<12><23>>.
+    Found 1-bit register for signal <dram1<12><22>>.
+    Found 1-bit register for signal <dram1<12><21>>.
+    Found 1-bit register for signal <dram1<12><20>>.
+    Found 1-bit register for signal <dram1<12><19>>.
+    Found 1-bit register for signal <dram1<12><18>>.
+    Found 1-bit register for signal <dram1<12><17>>.
+    Found 1-bit register for signal <dram1<12><16>>.
+    Found 1-bit register for signal <dram1<12><15>>.
+    Found 1-bit register for signal <dram1<12><14>>.
+    Found 1-bit register for signal <dram1<12><13>>.
+    Found 1-bit register for signal <dram1<12><12>>.
+    Found 1-bit register for signal <dram1<12><11>>.
+    Found 1-bit register for signal <dram1<12><10>>.
+    Found 1-bit register for signal <dram1<12><9>>.
+    Found 1-bit register for signal <dram1<12><8>>.
+    Found 1-bit register for signal <dram1<12><7>>.
+    Found 1-bit register for signal <dram1<12><6>>.
+    Found 1-bit register for signal <dram1<12><5>>.
+    Found 1-bit register for signal <dram1<12><4>>.
+    Found 1-bit register for signal <dram1<12><3>>.
+    Found 1-bit register for signal <dram1<12><2>>.
+    Found 1-bit register for signal <dram1<12><1>>.
+    Found 1-bit register for signal <dram1<12><0>>.
+    Found 1-bit register for signal <dram1<13><31>>.
+    Found 1-bit register for signal <dram1<13><30>>.
+    Found 1-bit register for signal <dram1<13><29>>.
+    Found 1-bit register for signal <dram1<13><28>>.
+    Found 1-bit register for signal <dram1<13><27>>.
+    Found 1-bit register for signal <dram1<13><26>>.
+    Found 1-bit register for signal <dram1<13><25>>.
+    Found 1-bit register for signal <dram1<13><24>>.
+    Found 1-bit register for signal <dram1<13><23>>.
+    Found 1-bit register for signal <dram1<13><22>>.
+    Found 1-bit register for signal <dram1<13><21>>.
+    Found 1-bit register for signal <dram1<13><20>>.
+    Found 1-bit register for signal <dram1<13><19>>.
+    Found 1-bit register for signal <dram1<13><18>>.
+    Found 1-bit register for signal <dram1<13><17>>.
+    Found 1-bit register for signal <dram1<13><16>>.
+    Found 1-bit register for signal <dram1<13><15>>.
+    Found 1-bit register for signal <dram1<13><14>>.
+    Found 1-bit register for signal <dram1<13><13>>.
+    Found 1-bit register for signal <dram1<13><12>>.
+    Found 1-bit register for signal <dram1<13><11>>.
+    Found 1-bit register for signal <dram1<13><10>>.
+    Found 1-bit register for signal <dram1<13><9>>.
+    Found 1-bit register for signal <dram1<13><8>>.
+    Found 1-bit register for signal <dram1<13><7>>.
+    Found 1-bit register for signal <dram1<13><6>>.
+    Found 1-bit register for signal <dram1<13><5>>.
+    Found 1-bit register for signal <dram1<13><4>>.
+    Found 1-bit register for signal <dram1<13><3>>.
+    Found 1-bit register for signal <dram1<13><2>>.
+    Found 1-bit register for signal <dram1<13><1>>.
+    Found 1-bit register for signal <dram1<13><0>>.
+    Found 1-bit register for signal <dram1<14><31>>.
+    Found 1-bit register for signal <dram1<14><30>>.
+    Found 1-bit register for signal <dram1<14><29>>.
+    Found 1-bit register for signal <dram1<14><28>>.
+    Found 1-bit register for signal <dram1<14><27>>.
+    Found 1-bit register for signal <dram1<14><26>>.
+    Found 1-bit register for signal <dram1<14><25>>.
+    Found 1-bit register for signal <dram1<14><24>>.
+    Found 1-bit register for signal <dram1<14><23>>.
+    Found 1-bit register for signal <dram1<14><22>>.
+    Found 1-bit register for signal <dram1<14><21>>.
+    Found 1-bit register for signal <dram1<14><20>>.
+    Found 1-bit register for signal <dram1<14><19>>.
+    Found 1-bit register for signal <dram1<14><18>>.
+    Found 1-bit register for signal <dram1<14><17>>.
+    Found 1-bit register for signal <dram1<14><16>>.
+    Found 1-bit register for signal <dram1<14><15>>.
+    Found 1-bit register for signal <dram1<14><14>>.
+    Found 1-bit register for signal <dram1<14><13>>.
+    Found 1-bit register for signal <dram1<14><12>>.
+    Found 1-bit register for signal <dram1<14><11>>.
+    Found 1-bit register for signal <dram1<14><10>>.
+    Found 1-bit register for signal <dram1<14><9>>.
+    Found 1-bit register for signal <dram1<14><8>>.
+    Found 1-bit register for signal <dram1<14><7>>.
+    Found 1-bit register for signal <dram1<14><6>>.
+    Found 1-bit register for signal <dram1<14><5>>.
+    Found 1-bit register for signal <dram1<14><4>>.
+    Found 1-bit register for signal <dram1<14><3>>.
+    Found 1-bit register for signal <dram1<14><2>>.
+    Found 1-bit register for signal <dram1<14><1>>.
+    Found 1-bit register for signal <dram1<14><0>>.
+    Found 1-bit register for signal <dram1<15><31>>.
+    Found 1-bit register for signal <dram1<15><30>>.
+    Found 1-bit register for signal <dram1<15><29>>.
+    Found 1-bit register for signal <dram1<15><28>>.
+    Found 1-bit register for signal <dram1<15><27>>.
+    Found 1-bit register for signal <dram1<15><26>>.
+    Found 1-bit register for signal <dram1<15><25>>.
+    Found 1-bit register for signal <dram1<15><24>>.
+    Found 1-bit register for signal <dram1<15><23>>.
+    Found 1-bit register for signal <dram1<15><22>>.
+    Found 1-bit register for signal <dram1<15><21>>.
+    Found 1-bit register for signal <dram1<15><20>>.
+    Found 1-bit register for signal <dram1<15><19>>.
+    Found 1-bit register for signal <dram1<15><18>>.
+    Found 1-bit register for signal <dram1<15><17>>.
+    Found 1-bit register for signal <dram1<15><16>>.
+    Found 1-bit register for signal <dram1<15><15>>.
+    Found 1-bit register for signal <dram1<15><14>>.
+    Found 1-bit register for signal <dram1<15><13>>.
+    Found 1-bit register for signal <dram1<15><12>>.
+    Found 1-bit register for signal <dram1<15><11>>.
+    Found 1-bit register for signal <dram1<15><10>>.
+    Found 1-bit register for signal <dram1<15><9>>.
+    Found 1-bit register for signal <dram1<15><8>>.
+    Found 1-bit register for signal <dram1<15><7>>.
+    Found 1-bit register for signal <dram1<15><6>>.
+    Found 1-bit register for signal <dram1<15><5>>.
+    Found 1-bit register for signal <dram1<15><4>>.
+    Found 1-bit register for signal <dram1<15><3>>.
+    Found 1-bit register for signal <dram1<15><2>>.
+    Found 1-bit register for signal <dram1<15><1>>.
+    Found 1-bit register for signal <dram1<15><0>>.
+    Found 1-bit register for signal <dram2<0><31>>.
+    Found 1-bit register for signal <dram2<0><30>>.
+    Found 1-bit register for signal <dram2<0><29>>.
+    Found 1-bit register for signal <dram2<0><28>>.
+    Found 1-bit register for signal <dram2<0><27>>.
+    Found 1-bit register for signal <dram2<0><26>>.
+    Found 1-bit register for signal <dram2<0><25>>.
+    Found 1-bit register for signal <dram2<0><24>>.
+    Found 1-bit register for signal <dram2<0><23>>.
+    Found 1-bit register for signal <dram2<0><22>>.
+    Found 1-bit register for signal <dram2<0><21>>.
+    Found 1-bit register for signal <dram2<0><20>>.
+    Found 1-bit register for signal <dram2<0><19>>.
+    Found 1-bit register for signal <dram2<0><18>>.
+    Found 1-bit register for signal <dram2<0><17>>.
+    Found 1-bit register for signal <dram2<0><16>>.
+    Found 1-bit register for signal <dram2<0><15>>.
+    Found 1-bit register for signal <dram2<0><14>>.
+    Found 1-bit register for signal <dram2<0><13>>.
+    Found 1-bit register for signal <dram2<0><12>>.
+    Found 1-bit register for signal <dram2<0><11>>.
+    Found 1-bit register for signal <dram2<0><10>>.
+    Found 1-bit register for signal <dram2<0><9>>.
+    Found 1-bit register for signal <dram2<0><8>>.
+    Found 1-bit register for signal <dram2<0><7>>.
+    Found 1-bit register for signal <dram2<0><6>>.
+    Found 1-bit register for signal <dram2<0><5>>.
+    Found 1-bit register for signal <dram2<0><4>>.
+    Found 1-bit register for signal <dram2<0><3>>.
+    Found 1-bit register for signal <dram2<0><2>>.
+    Found 1-bit register for signal <dram2<0><1>>.
+    Found 1-bit register for signal <dram2<0><0>>.
+    Found 1-bit register for signal <dram2<1><31>>.
+    Found 1-bit register for signal <dram2<1><30>>.
+    Found 1-bit register for signal <dram2<1><29>>.
+    Found 1-bit register for signal <dram2<1><28>>.
+    Found 1-bit register for signal <dram2<1><27>>.
+    Found 1-bit register for signal <dram2<1><26>>.
+    Found 1-bit register for signal <dram2<1><25>>.
+    Found 1-bit register for signal <dram2<1><24>>.
+    Found 1-bit register for signal <dram2<1><23>>.
+    Found 1-bit register for signal <dram2<1><22>>.
+    Found 1-bit register for signal <dram2<1><21>>.
+    Found 1-bit register for signal <dram2<1><20>>.
+    Found 1-bit register for signal <dram2<1><19>>.
+    Found 1-bit register for signal <dram2<1><18>>.
+    Found 1-bit register for signal <dram2<1><17>>.
+    Found 1-bit register for signal <dram2<1><16>>.
+    Found 1-bit register for signal <dram2<1><15>>.
+    Found 1-bit register for signal <dram2<1><14>>.
+    Found 1-bit register for signal <dram2<1><13>>.
+    Found 1-bit register for signal <dram2<1><12>>.
+    Found 1-bit register for signal <dram2<1><11>>.
+    Found 1-bit register for signal <dram2<1><10>>.
+    Found 1-bit register for signal <dram2<1><9>>.
+    Found 1-bit register for signal <dram2<1><8>>.
+    Found 1-bit register for signal <dram2<1><7>>.
+    Found 1-bit register for signal <dram2<1><6>>.
+    Found 1-bit register for signal <dram2<1><5>>.
+    Found 1-bit register for signal <dram2<1><4>>.
+    Found 1-bit register for signal <dram2<1><3>>.
+    Found 1-bit register for signal <dram2<1><2>>.
+    Found 1-bit register for signal <dram2<1><1>>.
+    Found 1-bit register for signal <dram2<1><0>>.
+    Found 1-bit register for signal <dram2<2><31>>.
+    Found 1-bit register for signal <dram2<2><30>>.
+    Found 1-bit register for signal <dram2<2><29>>.
+    Found 1-bit register for signal <dram2<2><28>>.
+    Found 1-bit register for signal <dram2<2><27>>.
+    Found 1-bit register for signal <dram2<2><26>>.
+    Found 1-bit register for signal <dram2<2><25>>.
+    Found 1-bit register for signal <dram2<2><24>>.
+    Found 1-bit register for signal <dram2<2><23>>.
+    Found 1-bit register for signal <dram2<2><22>>.
+    Found 1-bit register for signal <dram2<2><21>>.
+    Found 1-bit register for signal <dram2<2><20>>.
+    Found 1-bit register for signal <dram2<2><19>>.
+    Found 1-bit register for signal <dram2<2><18>>.
+    Found 1-bit register for signal <dram2<2><17>>.
+    Found 1-bit register for signal <dram2<2><16>>.
+    Found 1-bit register for signal <dram2<2><15>>.
+    Found 1-bit register for signal <dram2<2><14>>.
+    Found 1-bit register for signal <dram2<2><13>>.
+    Found 1-bit register for signal <dram2<2><12>>.
+    Found 1-bit register for signal <dram2<2><11>>.
+    Found 1-bit register for signal <dram2<2><10>>.
+    Found 1-bit register for signal <dram2<2><9>>.
+    Found 1-bit register for signal <dram2<2><8>>.
+    Found 1-bit register for signal <dram2<2><7>>.
+    Found 1-bit register for signal <dram2<2><6>>.
+    Found 1-bit register for signal <dram2<2><5>>.
+    Found 1-bit register for signal <dram2<2><4>>.
+    Found 1-bit register for signal <dram2<2><3>>.
+    Found 1-bit register for signal <dram2<2><2>>.
+    Found 1-bit register for signal <dram2<2><1>>.
+    Found 1-bit register for signal <dram2<2><0>>.
+    Found 1-bit register for signal <dram2<3><31>>.
+    Found 1-bit register for signal <dram2<3><30>>.
+    Found 1-bit register for signal <dram2<3><29>>.
+    Found 1-bit register for signal <dram2<3><28>>.
+    Found 1-bit register for signal <dram2<3><27>>.
+    Found 1-bit register for signal <dram2<3><26>>.
+    Found 1-bit register for signal <dram2<3><25>>.
+    Found 1-bit register for signal <dram2<3><24>>.
+    Found 1-bit register for signal <dram2<3><23>>.
+    Found 1-bit register for signal <dram2<3><22>>.
+    Found 1-bit register for signal <dram2<3><21>>.
+    Found 1-bit register for signal <dram2<3><20>>.
+    Found 1-bit register for signal <dram2<3><19>>.
+    Found 1-bit register for signal <dram2<3><18>>.
+    Found 1-bit register for signal <dram2<3><17>>.
+    Found 1-bit register for signal <dram2<3><16>>.
+    Found 1-bit register for signal <dram2<3><15>>.
+    Found 1-bit register for signal <dram2<3><14>>.
+    Found 1-bit register for signal <dram2<3><13>>.
+    Found 1-bit register for signal <dram2<3><12>>.
+    Found 1-bit register for signal <dram2<3><11>>.
+    Found 1-bit register for signal <dram2<3><10>>.
+    Found 1-bit register for signal <dram2<3><9>>.
+    Found 1-bit register for signal <dram2<3><8>>.
+    Found 1-bit register for signal <dram2<3><7>>.
+    Found 1-bit register for signal <dram2<3><6>>.
+    Found 1-bit register for signal <dram2<3><5>>.
+    Found 1-bit register for signal <dram2<3><4>>.
+    Found 1-bit register for signal <dram2<3><3>>.
+    Found 1-bit register for signal <dram2<3><2>>.
+    Found 1-bit register for signal <dram2<3><1>>.
+    Found 1-bit register for signal <dram2<3><0>>.
+    Found 1-bit register for signal <dram2<4><31>>.
+    Found 1-bit register for signal <dram2<4><30>>.
+    Found 1-bit register for signal <dram2<4><29>>.
+    Found 1-bit register for signal <dram2<4><28>>.
+    Found 1-bit register for signal <dram2<4><27>>.
+    Found 1-bit register for signal <dram2<4><26>>.
+    Found 1-bit register for signal <dram2<4><25>>.
+    Found 1-bit register for signal <dram2<4><24>>.
+    Found 1-bit register for signal <dram2<4><23>>.
+    Found 1-bit register for signal <dram2<4><22>>.
+    Found 1-bit register for signal <dram2<4><21>>.
+    Found 1-bit register for signal <dram2<4><20>>.
+    Found 1-bit register for signal <dram2<4><19>>.
+    Found 1-bit register for signal <dram2<4><18>>.
+    Found 1-bit register for signal <dram2<4><17>>.
+    Found 1-bit register for signal <dram2<4><16>>.
+    Found 1-bit register for signal <dram2<4><15>>.
+    Found 1-bit register for signal <dram2<4><14>>.
+    Found 1-bit register for signal <dram2<4><13>>.
+    Found 1-bit register for signal <dram2<4><12>>.
+    Found 1-bit register for signal <dram2<4><11>>.
+    Found 1-bit register for signal <dram2<4><10>>.
+    Found 1-bit register for signal <dram2<4><9>>.
+    Found 1-bit register for signal <dram2<4><8>>.
+    Found 1-bit register for signal <dram2<4><7>>.
+    Found 1-bit register for signal <dram2<4><6>>.
+    Found 1-bit register for signal <dram2<4><5>>.
+    Found 1-bit register for signal <dram2<4><4>>.
+    Found 1-bit register for signal <dram2<4><3>>.
+    Found 1-bit register for signal <dram2<4><2>>.
+    Found 1-bit register for signal <dram2<4><1>>.
+    Found 1-bit register for signal <dram2<4><0>>.
+    Found 1-bit register for signal <dram2<5><31>>.
+    Found 1-bit register for signal <dram2<5><30>>.
+    Found 1-bit register for signal <dram2<5><29>>.
+    Found 1-bit register for signal <dram2<5><28>>.
+    Found 1-bit register for signal <dram2<5><27>>.
+    Found 1-bit register for signal <dram2<5><26>>.
+    Found 1-bit register for signal <dram2<5><25>>.
+    Found 1-bit register for signal <dram2<5><24>>.
+    Found 1-bit register for signal <dram2<5><23>>.
+    Found 1-bit register for signal <dram2<5><22>>.
+    Found 1-bit register for signal <dram2<5><21>>.
+    Found 1-bit register for signal <dram2<5><20>>.
+    Found 1-bit register for signal <dram2<5><19>>.
+    Found 1-bit register for signal <dram2<5><18>>.
+    Found 1-bit register for signal <dram2<5><17>>.
+    Found 1-bit register for signal <dram2<5><16>>.
+    Found 1-bit register for signal <dram2<5><15>>.
+    Found 1-bit register for signal <dram2<5><14>>.
+    Found 1-bit register for signal <dram2<5><13>>.
+    Found 1-bit register for signal <dram2<5><12>>.
+    Found 1-bit register for signal <dram2<5><11>>.
+    Found 1-bit register for signal <dram2<5><10>>.
+    Found 1-bit register for signal <dram2<5><9>>.
+    Found 1-bit register for signal <dram2<5><8>>.
+    Found 1-bit register for signal <dram2<5><7>>.
+    Found 1-bit register for signal <dram2<5><6>>.
+    Found 1-bit register for signal <dram2<5><5>>.
+    Found 1-bit register for signal <dram2<5><4>>.
+    Found 1-bit register for signal <dram2<5><3>>.
+    Found 1-bit register for signal <dram2<5><2>>.
+    Found 1-bit register for signal <dram2<5><1>>.
+    Found 1-bit register for signal <dram2<5><0>>.
+    Found 1-bit register for signal <dram2<6><31>>.
+    Found 1-bit register for signal <dram2<6><30>>.
+    Found 1-bit register for signal <dram2<6><29>>.
+    Found 1-bit register for signal <dram2<6><28>>.
+    Found 1-bit register for signal <dram2<6><27>>.
+    Found 1-bit register for signal <dram2<6><26>>.
+    Found 1-bit register for signal <dram2<6><25>>.
+    Found 1-bit register for signal <dram2<6><24>>.
+    Found 1-bit register for signal <dram2<6><23>>.
+    Found 1-bit register for signal <dram2<6><22>>.
+    Found 1-bit register for signal <dram2<6><21>>.
+    Found 1-bit register for signal <dram2<6><20>>.
+    Found 1-bit register for signal <dram2<6><19>>.
+    Found 1-bit register for signal <dram2<6><18>>.
+    Found 1-bit register for signal <dram2<6><17>>.
+    Found 1-bit register for signal <dram2<6><16>>.
+    Found 1-bit register for signal <dram2<6><15>>.
+    Found 1-bit register for signal <dram2<6><14>>.
+    Found 1-bit register for signal <dram2<6><13>>.
+    Found 1-bit register for signal <dram2<6><12>>.
+    Found 1-bit register for signal <dram2<6><11>>.
+    Found 1-bit register for signal <dram2<6><10>>.
+    Found 1-bit register for signal <dram2<6><9>>.
+    Found 1-bit register for signal <dram2<6><8>>.
+    Found 1-bit register for signal <dram2<6><7>>.
+    Found 1-bit register for signal <dram2<6><6>>.
+    Found 1-bit register for signal <dram2<6><5>>.
+    Found 1-bit register for signal <dram2<6><4>>.
+    Found 1-bit register for signal <dram2<6><3>>.
+    Found 1-bit register for signal <dram2<6><2>>.
+    Found 1-bit register for signal <dram2<6><1>>.
+    Found 1-bit register for signal <dram2<6><0>>.
+    Found 1-bit register for signal <dram2<7><31>>.
+    Found 1-bit register for signal <dram2<7><30>>.
+    Found 1-bit register for signal <dram2<7><29>>.
+    Found 1-bit register for signal <dram2<7><28>>.
+    Found 1-bit register for signal <dram2<7><27>>.
+    Found 1-bit register for signal <dram2<7><26>>.
+    Found 1-bit register for signal <dram2<7><25>>.
+    Found 1-bit register for signal <dram2<7><24>>.
+    Found 1-bit register for signal <dram2<7><23>>.
+    Found 1-bit register for signal <dram2<7><22>>.
+    Found 1-bit register for signal <dram2<7><21>>.
+    Found 1-bit register for signal <dram2<7><20>>.
+    Found 1-bit register for signal <dram2<7><19>>.
+    Found 1-bit register for signal <dram2<7><18>>.
+    Found 1-bit register for signal <dram2<7><17>>.
+    Found 1-bit register for signal <dram2<7><16>>.
+    Found 1-bit register for signal <dram2<7><15>>.
+    Found 1-bit register for signal <dram2<7><14>>.
+    Found 1-bit register for signal <dram2<7><13>>.
+    Found 1-bit register for signal <dram2<7><12>>.
+    Found 1-bit register for signal <dram2<7><11>>.
+    Found 1-bit register for signal <dram2<7><10>>.
+    Found 1-bit register for signal <dram2<7><9>>.
+    Found 1-bit register for signal <dram2<7><8>>.
+    Found 1-bit register for signal <dram2<7><7>>.
+    Found 1-bit register for signal <dram2<7><6>>.
+    Found 1-bit register for signal <dram2<7><5>>.
+    Found 1-bit register for signal <dram2<7><4>>.
+    Found 1-bit register for signal <dram2<7><3>>.
+    Found 1-bit register for signal <dram2<7><2>>.
+    Found 1-bit register for signal <dram2<7><1>>.
+    Found 1-bit register for signal <dram2<7><0>>.
+    Found 1-bit register for signal <dram2<8><31>>.
+    Found 1-bit register for signal <dram2<8><30>>.
+    Found 1-bit register for signal <dram2<8><29>>.
+    Found 1-bit register for signal <dram2<8><28>>.
+    Found 1-bit register for signal <dram2<8><27>>.
+    Found 1-bit register for signal <dram2<8><26>>.
+    Found 1-bit register for signal <dram2<8><25>>.
+    Found 1-bit register for signal <dram2<8><24>>.
+    Found 1-bit register for signal <dram2<8><23>>.
+    Found 1-bit register for signal <dram2<8><22>>.
+    Found 1-bit register for signal <dram2<8><21>>.
+    Found 1-bit register for signal <dram2<8><20>>.
+    Found 1-bit register for signal <dram2<8><19>>.
+    Found 1-bit register for signal <dram2<8><18>>.
+    Found 1-bit register for signal <dram2<8><17>>.
+    Found 1-bit register for signal <dram2<8><16>>.
+    Found 1-bit register for signal <dram2<8><15>>.
+    Found 1-bit register for signal <dram2<8><14>>.
+    Found 1-bit register for signal <dram2<8><13>>.
+    Found 1-bit register for signal <dram2<8><12>>.
+    Found 1-bit register for signal <dram2<8><11>>.
+    Found 1-bit register for signal <dram2<8><10>>.
+    Found 1-bit register for signal <dram2<8><9>>.
+    Found 1-bit register for signal <dram2<8><8>>.
+    Found 1-bit register for signal <dram2<8><7>>.
+    Found 1-bit register for signal <dram2<8><6>>.
+    Found 1-bit register for signal <dram2<8><5>>.
+    Found 1-bit register for signal <dram2<8><4>>.
+    Found 1-bit register for signal <dram2<8><3>>.
+    Found 1-bit register for signal <dram2<8><2>>.
+    Found 1-bit register for signal <dram2<8><1>>.
+    Found 1-bit register for signal <dram2<8><0>>.
+    Found 1-bit register for signal <dram2<9><31>>.
+    Found 1-bit register for signal <dram2<9><30>>.
+    Found 1-bit register for signal <dram2<9><29>>.
+    Found 1-bit register for signal <dram2<9><28>>.
+    Found 1-bit register for signal <dram2<9><27>>.
+    Found 1-bit register for signal <dram2<9><26>>.
+    Found 1-bit register for signal <dram2<9><25>>.
+    Found 1-bit register for signal <dram2<9><24>>.
+    Found 1-bit register for signal <dram2<9><23>>.
+    Found 1-bit register for signal <dram2<9><22>>.
+    Found 1-bit register for signal <dram2<9><21>>.
+    Found 1-bit register for signal <dram2<9><20>>.
+    Found 1-bit register for signal <dram2<9><19>>.
+    Found 1-bit register for signal <dram2<9><18>>.
+    Found 1-bit register for signal <dram2<9><17>>.
+    Found 1-bit register for signal <dram2<9><16>>.
+    Found 1-bit register for signal <dram2<9><15>>.
+    Found 1-bit register for signal <dram2<9><14>>.
+    Found 1-bit register for signal <dram2<9><13>>.
+    Found 1-bit register for signal <dram2<9><12>>.
+    Found 1-bit register for signal <dram2<9><11>>.
+    Found 1-bit register for signal <dram2<9><10>>.
+    Found 1-bit register for signal <dram2<9><9>>.
+    Found 1-bit register for signal <dram2<9><8>>.
+    Found 1-bit register for signal <dram2<9><7>>.
+    Found 1-bit register for signal <dram2<9><6>>.
+    Found 1-bit register for signal <dram2<9><5>>.
+    Found 1-bit register for signal <dram2<9><4>>.
+    Found 1-bit register for signal <dram2<9><3>>.
+    Found 1-bit register for signal <dram2<9><2>>.
+    Found 1-bit register for signal <dram2<9><1>>.
+    Found 1-bit register for signal <dram2<9><0>>.
+    Found 1-bit register for signal <dram2<10><31>>.
+    Found 1-bit register for signal <dram2<10><30>>.
+    Found 1-bit register for signal <dram2<10><29>>.
+    Found 1-bit register for signal <dram2<10><28>>.
+    Found 1-bit register for signal <dram2<10><27>>.
+    Found 1-bit register for signal <dram2<10><26>>.
+    Found 1-bit register for signal <dram2<10><25>>.
+    Found 1-bit register for signal <dram2<10><24>>.
+    Found 1-bit register for signal <dram2<10><23>>.
+    Found 1-bit register for signal <dram2<10><22>>.
+    Found 1-bit register for signal <dram2<10><21>>.
+    Found 1-bit register for signal <dram2<10><20>>.
+    Found 1-bit register for signal <dram2<10><19>>.
+    Found 1-bit register for signal <dram2<10><18>>.
+    Found 1-bit register for signal <dram2<10><17>>.
+    Found 1-bit register for signal <dram2<10><16>>.
+    Found 1-bit register for signal <dram2<10><15>>.
+    Found 1-bit register for signal <dram2<10><14>>.
+    Found 1-bit register for signal <dram2<10><13>>.
+    Found 1-bit register for signal <dram2<10><12>>.
+    Found 1-bit register for signal <dram2<10><11>>.
+    Found 1-bit register for signal <dram2<10><10>>.
+    Found 1-bit register for signal <dram2<10><9>>.
+    Found 1-bit register for signal <dram2<10><8>>.
+    Found 1-bit register for signal <dram2<10><7>>.
+    Found 1-bit register for signal <dram2<10><6>>.
+    Found 1-bit register for signal <dram2<10><5>>.
+    Found 1-bit register for signal <dram2<10><4>>.
+    Found 1-bit register for signal <dram2<10><3>>.
+    Found 1-bit register for signal <dram2<10><2>>.
+    Found 1-bit register for signal <dram2<10><1>>.
+    Found 1-bit register for signal <dram2<10><0>>.
+    Found 1-bit register for signal <dram2<11><31>>.
+    Found 1-bit register for signal <dram2<11><30>>.
+    Found 1-bit register for signal <dram2<11><29>>.
+    Found 1-bit register for signal <dram2<11><28>>.
+    Found 1-bit register for signal <dram2<11><27>>.
+    Found 1-bit register for signal <dram2<11><26>>.
+    Found 1-bit register for signal <dram2<11><25>>.
+    Found 1-bit register for signal <dram2<11><24>>.
+    Found 1-bit register for signal <dram2<11><23>>.
+    Found 1-bit register for signal <dram2<11><22>>.
+    Found 1-bit register for signal <dram2<11><21>>.
+    Found 1-bit register for signal <dram2<11><20>>.
+    Found 1-bit register for signal <dram2<11><19>>.
+    Found 1-bit register for signal <dram2<11><18>>.
+    Found 1-bit register for signal <dram2<11><17>>.
+    Found 1-bit register for signal <dram2<11><16>>.
+    Found 1-bit register for signal <dram2<11><15>>.
+    Found 1-bit register for signal <dram2<11><14>>.
+    Found 1-bit register for signal <dram2<11><13>>.
+    Found 1-bit register for signal <dram2<11><12>>.
+    Found 1-bit register for signal <dram2<11><11>>.
+    Found 1-bit register for signal <dram2<11><10>>.
+    Found 1-bit register for signal <dram2<11><9>>.
+    Found 1-bit register for signal <dram2<11><8>>.
+    Found 1-bit register for signal <dram2<11><7>>.
+    Found 1-bit register for signal <dram2<11><6>>.
+    Found 1-bit register for signal <dram2<11><5>>.
+    Found 1-bit register for signal <dram2<11><4>>.
+    Found 1-bit register for signal <dram2<11><3>>.
+    Found 1-bit register for signal <dram2<11><2>>.
+    Found 1-bit register for signal <dram2<11><1>>.
+    Found 1-bit register for signal <dram2<11><0>>.
+    Found 1-bit register for signal <dram2<12><31>>.
+    Found 1-bit register for signal <dram2<12><30>>.
+    Found 1-bit register for signal <dram2<12><29>>.
+    Found 1-bit register for signal <dram2<12><28>>.
+    Found 1-bit register for signal <dram2<12><27>>.
+    Found 1-bit register for signal <dram2<12><26>>.
+    Found 1-bit register for signal <dram2<12><25>>.
+    Found 1-bit register for signal <dram2<12><24>>.
+    Found 1-bit register for signal <dram2<12><23>>.
+    Found 1-bit register for signal <dram2<12><22>>.
+    Found 1-bit register for signal <dram2<12><21>>.
+    Found 1-bit register for signal <dram2<12><20>>.
+    Found 1-bit register for signal <dram2<12><19>>.
+    Found 1-bit register for signal <dram2<12><18>>.
+    Found 1-bit register for signal <dram2<12><17>>.
+    Found 1-bit register for signal <dram2<12><16>>.
+    Found 1-bit register for signal <dram2<12><15>>.
+    Found 1-bit register for signal <dram2<12><14>>.
+    Found 1-bit register for signal <dram2<12><13>>.
+    Found 1-bit register for signal <dram2<12><12>>.
+    Found 1-bit register for signal <dram2<12><11>>.
+    Found 1-bit register for signal <dram2<12><10>>.
+    Found 1-bit register for signal <dram2<12><9>>.
+    Found 1-bit register for signal <dram2<12><8>>.
+    Found 1-bit register for signal <dram2<12><7>>.
+    Found 1-bit register for signal <dram2<12><6>>.
+    Found 1-bit register for signal <dram2<12><5>>.
+    Found 1-bit register for signal <dram2<12><4>>.
+    Found 1-bit register for signal <dram2<12><3>>.
+    Found 1-bit register for signal <dram2<12><2>>.
+    Found 1-bit register for signal <dram2<12><1>>.
+    Found 1-bit register for signal <dram2<12><0>>.
+    Found 1-bit register for signal <dram2<13><31>>.
+    Found 1-bit register for signal <dram2<13><30>>.
+    Found 1-bit register for signal <dram2<13><29>>.
+    Found 1-bit register for signal <dram2<13><28>>.
+    Found 1-bit register for signal <dram2<13><27>>.
+    Found 1-bit register for signal <dram2<13><26>>.
+    Found 1-bit register for signal <dram2<13><25>>.
+    Found 1-bit register for signal <dram2<13><24>>.
+    Found 1-bit register for signal <dram2<13><23>>.
+    Found 1-bit register for signal <dram2<13><22>>.
+    Found 1-bit register for signal <dram2<13><21>>.
+    Found 1-bit register for signal <dram2<13><20>>.
+    Found 1-bit register for signal <dram2<13><19>>.
+    Found 1-bit register for signal <dram2<13><18>>.
+    Found 1-bit register for signal <dram2<13><17>>.
+    Found 1-bit register for signal <dram2<13><16>>.
+    Found 1-bit register for signal <dram2<13><15>>.
+    Found 1-bit register for signal <dram2<13><14>>.
+    Found 1-bit register for signal <dram2<13><13>>.
+    Found 1-bit register for signal <dram2<13><12>>.
+    Found 1-bit register for signal <dram2<13><11>>.
+    Found 1-bit register for signal <dram2<13><10>>.
+    Found 1-bit register for signal <dram2<13><9>>.
+    Found 1-bit register for signal <dram2<13><8>>.
+    Found 1-bit register for signal <dram2<13><7>>.
+    Found 1-bit register for signal <dram2<13><6>>.
+    Found 1-bit register for signal <dram2<13><5>>.
+    Found 1-bit register for signal <dram2<13><4>>.
+    Found 1-bit register for signal <dram2<13><3>>.
+    Found 1-bit register for signal <dram2<13><2>>.
+    Found 1-bit register for signal <dram2<13><1>>.
+    Found 1-bit register for signal <dram2<13><0>>.
+    Found 1-bit register for signal <dram2<14><31>>.
+    Found 1-bit register for signal <dram2<14><30>>.
+    Found 1-bit register for signal <dram2<14><29>>.
+    Found 1-bit register for signal <dram2<14><28>>.
+    Found 1-bit register for signal <dram2<14><27>>.
+    Found 1-bit register for signal <dram2<14><26>>.
+    Found 1-bit register for signal <dram2<14><25>>.
+    Found 1-bit register for signal <dram2<14><24>>.
+    Found 1-bit register for signal <dram2<14><23>>.
+    Found 1-bit register for signal <dram2<14><22>>.
+    Found 1-bit register for signal <dram2<14><21>>.
+    Found 1-bit register for signal <dram2<14><20>>.
+    Found 1-bit register for signal <dram2<14><19>>.
+    Found 1-bit register for signal <dram2<14><18>>.
+    Found 1-bit register for signal <dram2<14><17>>.
+    Found 1-bit register for signal <dram2<14><16>>.
+    Found 1-bit register for signal <dram2<14><15>>.
+    Found 1-bit register for signal <dram2<14><14>>.
+    Found 1-bit register for signal <dram2<14><13>>.
+    Found 1-bit register for signal <dram2<14><12>>.
+    Found 1-bit register for signal <dram2<14><11>>.
+    Found 1-bit register for signal <dram2<14><10>>.
+    Found 1-bit register for signal <dram2<14><9>>.
+    Found 1-bit register for signal <dram2<14><8>>.
+    Found 1-bit register for signal <dram2<14><7>>.
+    Found 1-bit register for signal <dram2<14><6>>.
+    Found 1-bit register for signal <dram2<14><5>>.
+    Found 1-bit register for signal <dram2<14><4>>.
+    Found 1-bit register for signal <dram2<14><3>>.
+    Found 1-bit register for signal <dram2<14><2>>.
+    Found 1-bit register for signal <dram2<14><1>>.
+    Found 1-bit register for signal <dram2<14><0>>.
+    Found 1-bit register for signal <dram2<15><31>>.
+    Found 1-bit register for signal <dram2<15><30>>.
+    Found 1-bit register for signal <dram2<15><29>>.
+    Found 1-bit register for signal <dram2<15><28>>.
+    Found 1-bit register for signal <dram2<15><27>>.
+    Found 1-bit register for signal <dram2<15><26>>.
+    Found 1-bit register for signal <dram2<15><25>>.
+    Found 1-bit register for signal <dram2<15><24>>.
+    Found 1-bit register for signal <dram2<15><23>>.
+    Found 1-bit register for signal <dram2<15><22>>.
+    Found 1-bit register for signal <dram2<15><21>>.
+    Found 1-bit register for signal <dram2<15><20>>.
+    Found 1-bit register for signal <dram2<15><19>>.
+    Found 1-bit register for signal <dram2<15><18>>.
+    Found 1-bit register for signal <dram2<15><17>>.
+    Found 1-bit register for signal <dram2<15><16>>.
+    Found 1-bit register for signal <dram2<15><15>>.
+    Found 1-bit register for signal <dram2<15><14>>.
+    Found 1-bit register for signal <dram2<15><13>>.
+    Found 1-bit register for signal <dram2<15><12>>.
+    Found 1-bit register for signal <dram2<15><11>>.
+    Found 1-bit register for signal <dram2<15><10>>.
+    Found 1-bit register for signal <dram2<15><9>>.
+    Found 1-bit register for signal <dram2<15><8>>.
+    Found 1-bit register for signal <dram2<15><7>>.
+    Found 1-bit register for signal <dram2<15><6>>.
+    Found 1-bit register for signal <dram2<15><5>>.
+    Found 1-bit register for signal <dram2<15><4>>.
+    Found 1-bit register for signal <dram2<15><3>>.
+    Found 1-bit register for signal <dram2<15><2>>.
+    Found 1-bit register for signal <dram2<15><1>>.
+    Found 1-bit register for signal <dram2<15><0>>.
+    Found 1-bit register for signal <read_enable_global_reg>.
+    Summary:
+	inferred 1025 D-type flip-flop(s).
+	inferred 1920 Multiplexer(s).
+Unit <DRAM_ComputationalBlock> synthesized.
+
+Synthesizing Unit <Level1CU>.
+    Related source file is "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/designlevel1cu.v".
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <Level1CU> synthesized.
+
+Synthesizing Unit <Level2CU>.
+    Related source file is "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/designlevel2cu.v".
+    Found 32-bit 4-to-1 multiplexer for signal <PE1_S> created at line 30.
+    Found 32-bit 4-to-1 multiplexer for signal <PE1_T> created at line 42.
+    Found 32-bit 4-to-1 multiplexer for signal <PE2_S> created at line 60.
+    Found 32-bit 4-to-1 multiplexer for signal <PE3_S> created at line 90.
+    Found 32-bit 3-to-1 multiplexer for signal <PE3_T> created at line 102.
+    Found 32-bit 4-to-1 multiplexer for signal <PE4_S> created at line 120.
+    Found 32-bit 4-to-1 multiplexer for signal <PE4_T> created at line 132.
+    Found 32-bit 4-to-1 multiplexer for signal <Bo> created at line 152.
+    Found 32-bit 3-to-1 multiplexer for signal <Do> created at line 169.
+    Found 32-bit 4-to-1 multiplexer for signal <Co> created at line 180.
+    Summary:
+	inferred  10 Multiplexer(s).
+Unit <Level2CU> synthesized.
+
+Synthesizing Unit <PE>.
+    Related source file is "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/designprocessingelement.v".
+WARNING:Xst:647 - Input <S<28:21>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 21-bit adder for signal <new_distance> created at line 14.
+    Found 21-bit comparator greater for signal <update_true> created at line 15
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <PE> synthesized.
+
+Synthesizing Unit <AGU>.
+    Related source file is "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/designagu.v".
+        number_of_columns = 16
+    Found 10-bit register for signal <write_address>.
+    Found 10-bit register for signal <read_address>.
+    Found 10-bit adder for signal <read_address[9]_GND_34_o_add_3_OUT> created at line 53.
+    Found 10-bit adder for signal <write_address[9]_GND_34_o_add_8_OUT> created at line 63.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+Unit <AGU> synthesized.
+
+Synthesizing Unit <TheController>.
+    Related source file is "e:/postgrad/seecs/thesis/shortestpath/virtex6/tasks/serial_bf16x16/design/pcores/bf_16x16_v1_00_a/hdl/verilog/thecontroller.v".
+        IDLE_STATE = 2'b00
+        INIT_STATE = 2'b01
+        PROC_STATE = 2'b11
+        WAIT_STATE = 2'b10
+    Found 2-bit register for signal <Current_State>.
+    Found finite state machine <FSM_1> for signal <Current_State>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_global (positive)                          |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit 4-to-1 multiplexer for signal <read_enable> created at line 46.
+    Summary:
+	inferred   3 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <TheController> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 38
+ 1-bit adder                                           : 1
+ 10-bit adder                                          : 2
+ 11-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 21-bit adder                                          : 32
+ 4-bit adder                                           : 1
+# Registers                                            : 70
+ 1-bit register                                        : 20
+ 10-bit register                                       : 2
+ 11-bit register                                       : 1
+ 2-bit register                                        : 3
+ 32-bit register                                       : 43
+ 4-bit register                                        : 1
+# Comparators                                          : 33
+ 11-bit comparator lessequal                           : 1
+ 21-bit comparator greater                             : 32
+# Multiplexers                                         : 2395
+ 1-bit 2-to-1 multiplexer                              : 2189
+ 1-bit 4-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 2
+ 21-bit 2-to-1 multiplexer                             : 32
+ 3-bit 2-to-1 multiplexer                              : 32
+ 32-bit 16-to-1 multiplexer                            : 1
+ 32-bit 2-to-1 multiplexer                             : 58
+ 32-bit 3-to-1 multiplexer                             : 16
+ 32-bit 4-to-1 multiplexer                             : 64
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/BRAM_0.ngc>.
+Loading core <BRAM_0> for timing and area information for instance <bram_0>.
+Loading core <BRAM_0> for timing and area information for instance <bram_1>.
+Loading core <BRAM_0> for timing and area information for instance <bram_2>.
+Loading core <BRAM_0> for timing and area information for instance <bram_3>.
+Loading core <BRAM_0> for timing and area information for instance <bram_4>.
+Loading core <BRAM_0> for timing and area information for instance <bram_5>.
+Loading core <BRAM_0> for timing and area information for instance <bram_6>.
+Loading core <BRAM_0> for timing and area information for instance <bram_7>.
+Loading core <BRAM_0> for timing and area information for instance <bram_8>.
+Loading core <BRAM_0> for timing and area information for instance <bram_9>.
+Loading core <BRAM_0> for timing and area information for instance <bram_10>.
+Loading core <BRAM_0> for timing and area information for instance <bram_11>.
+Loading core <BRAM_0> for timing and area information for instance <bram_12>.
+Loading core <BRAM_0> for timing and area information for instance <bram_13>.
+Loading core <BRAM_0> for timing and area information for instance <bram_14>.
+Loading core <BRAM_0> for timing and area information for instance <bram_15>.
+INFO:Xst:2261 - The FF/Latch <slv_reg4_1> in Unit <USER_LOGIC_I> is equivalent to the following 29 FFs/Latches, which will be removed : <slv_reg4_2> <slv_reg4_3> <slv_reg4_4> <slv_reg4_5> <slv_reg4_6> <slv_reg4_7> <slv_reg4_19> <slv_reg4_20> <slv_reg4_21> <slv_reg4_22> <slv_reg4_23> <slv_reg4_24> <slv_reg4_25> <slv_reg4_26> <slv_reg4_27> <slv_reg4_28> <slv_reg4_29> <slv_reg4_30> <slv_reg4_31> <slv_reg5_22> <slv_reg5_23> <slv_reg5_24> <slv_reg5_25> <slv_reg5_26> <slv_reg5_27> <slv_reg5_28> <slv_reg5_29> <slv_reg5_30> <slv_reg5_31> 
+WARNING:Xst:1293 - FF/Latch <s_axi_bresp_i_0> has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <s_axi_bresp_i_1> has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <s_axi_rresp_i_0> has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <s_axi_rresp_i_1> has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <slv_reg4_1> (without init value) has a constant value of 0 in block <USER_LOGIC_I>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <slv_reg4<31:19>> (without init value) have a constant value of 0 in block <user_logic>.
+WARNING:Xst:2404 -  FFs/Latches <slv_reg5<31:22>> (without init value) have a constant value of 0 in block <user_logic>.
+
+Synthesizing (advanced) Unit <AGU>.
+The following registers are absorbed into counter <write_address>: 1 register on signal <write_address>.
+The following registers are absorbed into counter <read_address>: 1 register on signal <read_address>.
+Unit <AGU> synthesized (advanced).
+
+Synthesizing (advanced) Unit <CounterBlock>.
+The following registers are absorbed into accumulator <iteration_counter>: 1 register on signal <iteration_counter>.
+The following registers are absorbed into counter <step_counter>: 1 register on signal <step_counter>.
+The following registers are absorbed into accumulator <phase_counter>: 1 register on signal <phase_counter>.
+Unit <CounterBlock> synthesized (advanced).
+
+Synthesizing (advanced) Unit <slave_attachment>.
+The following registers are absorbed into counter <INCLUDE_DPHASE_TIMER.dpto_cnt>: 1 register on signal <INCLUDE_DPHASE_TIMER.dpto_cnt>.
+Unit <slave_attachment> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 32
+ 21-bit adder                                          : 32
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Accumulators                                         : 2
+ 1-bit up accumulator                                  : 1
+ 11-bit up accumulator                                 : 1
+# Registers                                            : 1376
+ Flip-Flops                                            : 1376
+# Comparators                                          : 33
+ 11-bit comparator lessequal                           : 1
+ 21-bit comparator greater                             : 32
+# Multiplexers                                         : 2385
+ 1-bit 2-to-1 multiplexer                              : 2179
+ 1-bit 4-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 2
+ 21-bit 2-to-1 multiplexer                             : 32
+ 3-bit 2-to-1 multiplexer                              : 32
+ 32-bit 16-to-1 multiplexer                            : 1
+ 32-bit 2-to-1 multiplexer                             : 58
+ 32-bit 3-to-1 multiplexer                             : 16
+ 32-bit 4-to-1 multiplexer                             : 64
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <s_axi_rresp_i_0> has a constant value of 0 in block <slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <s_axi_bresp_i_0> has a constant value of 0 in block <slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <slv_reg4_1> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <slv_reg4_2> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <slv_reg4_3> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <slv_reg4_4> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <slv_reg4_5> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <slv_reg4_6> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <slv_reg4_7> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/FSM_0> on signal <state[1:2]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ sm_idle  | 00
+ sm_read  | 01
+ sm_write | 10
+ sm_resp  | 11
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <USER_LOGIC_I/FSM_1> on signal <Current_State[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+
+Optimizing unit <bf_16x16> ...
+
+Optimizing unit <slave_attachment> ...
+
+Optimizing unit <address_decoder> ...
+
+Optimizing unit <user_logic> ...
+
+Optimizing unit <DRAM_ComputationalBlock> ...
+
+Optimizing unit <Level2CU> ...
+
+Optimizing unit <CounterBlock> ...
+
+Optimizing unit <AGU> ...
+WARNING:Xst:1293 - FF/Latch <AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_1> has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_1> has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0> of sequential type is unconnected in block <bf_16x16>.
+WARNING:Xst:1710 - FF/Latch <USER_LOGIC_I/BF/agr/write_address_4> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/BF/agr/write_address_5> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/BF/agr/write_address_6> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/BF/agr/write_address_7> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/BF/agr/write_address_8> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/BF/agr/write_address_9> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/BF/agr/read_address_4> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/BF/agr/read_address_5> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/BF/agr/read_address_6> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/BF/agr/read_address_7> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/BF/agr/read_address_8> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/BF/agr/read_address_9> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_4> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_5> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_6> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_7> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_8> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_9> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_14> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_15> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_16> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_17> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_18> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/slv_reg5_19> (without init value) has a constant value of 0 in block <bf_16x16>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <USER_LOGIC_I/BF/DP/DCB/read_enable_global_reg> in Unit <bf_16x16> is equivalent to the following FF/Latch, which will be removed : <USER_LOGIC_I/BF/DP/CB/read_enable_global_reg> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block bf_16x16, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1381
+ Flip-Flops                                            : 1381
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : bf_16x16.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 9330
+#      GND                         : 17
+#      INV                         : 5
+#      LUT1                        : 16
+#      LUT2                        : 171
+#      LUT3                        : 1650
+#      LUT4                        : 1000
+#      LUT5                        : 1395
+#      LUT6                        : 3253
+#      MUXCY                       : 1018
+#      MUXF7                       : 65
+#      MUXF8                       : 32
+#      VCC                         : 17
+#      XORCY                       : 691
+# FlipFlops/Latches                : 1381
+#      FD                          : 1
+#      FDE                         : 1
+#      FDR                         : 1201
+#      FDRE                        : 178
+# RAMS                             : 16
+#      RAMB36E1                    : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 87
+#      IBUF                        : 46
+#      OBUF                        : 41
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx240tff1156-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1381  out of  301440     0%  
+ Number of Slice LUTs:                 7490  out of  150720     4%  
+    Number used as Logic:              7490  out of  150720     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   7567
+   Number with an unused Flip Flop:    6186  out of   7567    81%  
+   Number with an unused LUT:            77  out of   7567     1%  
+   Number of fully used LUT-FF pairs:  1304  out of   7567    17%  
+   Number of unique control sets:        15
+
+IO Utilization: 
+ Number of IOs:                         148
+ Number of bonded IOBs:                  88  out of    600    14%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               16  out of    416     3%  
+    Number using Block RAM only:         16
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+S_AXI_ACLK                         | BUFGP                  | 1397  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                         | Buffer(FF name)                                                                                                                                      | Load  |
+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+USER_LOGIC_I/bram_0/N1(USER_LOGIC_I/bram_0/XST_GND:G)  | NONE(USER_LOGIC_I/bram_0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram) | 2     |
+USER_LOGIC_I/bram_1/N1(USER_LOGIC_I/bram_1/XST_GND:G)  | NONE(USER_LOGIC_I/bram_1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram) | 2     |
+USER_LOGIC_I/bram_10/N1(USER_LOGIC_I/bram_10/XST_GND:G)| NONE(USER_LOGIC_I/bram_10/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+USER_LOGIC_I/bram_11/N1(USER_LOGIC_I/bram_11/XST_GND:G)| NONE(USER_LOGIC_I/bram_11/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+USER_LOGIC_I/bram_12/N1(USER_LOGIC_I/bram_12/XST_GND:G)| NONE(USER_LOGIC_I/bram_12/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+USER_LOGIC_I/bram_13/N1(USER_LOGIC_I/bram_13/XST_GND:G)| NONE(USER_LOGIC_I/bram_13/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+USER_LOGIC_I/bram_14/N1(USER_LOGIC_I/bram_14/XST_GND:G)| NONE(USER_LOGIC_I/bram_14/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+USER_LOGIC_I/bram_15/N1(USER_LOGIC_I/bram_15/XST_GND:G)| NONE(USER_LOGIC_I/bram_15/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+USER_LOGIC_I/bram_2/N1(USER_LOGIC_I/bram_2/XST_GND:G)  | NONE(USER_LOGIC_I/bram_2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram) | 2     |
+USER_LOGIC_I/bram_3/N1(USER_LOGIC_I/bram_3/XST_GND:G)  | NONE(USER_LOGIC_I/bram_3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram) | 2     |
+USER_LOGIC_I/bram_4/N1(USER_LOGIC_I/bram_4/XST_GND:G)  | NONE(USER_LOGIC_I/bram_4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram) | 2     |
+USER_LOGIC_I/bram_5/N1(USER_LOGIC_I/bram_5/XST_GND:G)  | NONE(USER_LOGIC_I/bram_5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram) | 2     |
+USER_LOGIC_I/bram_6/N1(USER_LOGIC_I/bram_6/XST_GND:G)  | NONE(USER_LOGIC_I/bram_6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram) | 2     |
+USER_LOGIC_I/bram_7/N1(USER_LOGIC_I/bram_7/XST_GND:G)  | NONE(USER_LOGIC_I/bram_7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram) | 2     |
+USER_LOGIC_I/bram_8/N1(USER_LOGIC_I/bram_8/XST_GND:G)  | NONE(USER_LOGIC_I/bram_8/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram) | 2     |
+USER_LOGIC_I/bram_9/N1(USER_LOGIC_I/bram_9/XST_GND:G)  | NONE(USER_LOGIC_I/bram_9/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram) | 2     |
+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 5.962ns (Maximum Frequency: 167.727MHz)
+   Minimum input arrival time before clock: 1.615ns
+   Maximum output required time after clock: 2.866ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'S_AXI_ACLK'
+  Clock period: 5.962ns (frequency: 167.727MHz)
+  Total number of paths / destination ports: 28004787 / 3608
+-------------------------------------------------------------------------
+Delay:               5.962ns (Levels of Logic = 28)
+  Source:            USER_LOGIC_I/BF/DP/CB/phase_counter (FF)
+  Destination:       USER_LOGIC_I/BF/DP/DCB/dram2_209 (FF)
+  Source Clock:      S_AXI_ACLK rising
+  Destination Clock: S_AXI_ACLK rising
+
+  Data Path: USER_LOGIC_I/BF/DP/CB/phase_counter to USER_LOGIC_I/BF/DP/DCB/dram2_209
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q           3962   0.375   0.824  USER_LOGIC_I/BF/DP/CB/phase_counter (USER_LOGIC_I/BF/DP/CB/phase_counter)
+     LUT3:I2->O            7   0.068   0.457  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/Mmux_B110 (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/B<0>)
+     LUT6:I5->O            2   0.068   0.405  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3_S<0>1 (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3_S<0>)
+     MUXCY:DI->O           1   0.223   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<0> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<0>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<1> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<1>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<2> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<2>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<3> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<3>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<4> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<4>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<5> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<5>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<6> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<6>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<7> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<7>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<8> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<8>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<9> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<9>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<10> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<10>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<11> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<11>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<12> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<12>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<13> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<13>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<14> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<14>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<15> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<15>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<16> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<16>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<17> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<17>)
+     MUXCY:CI->O           1   0.020   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<18> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_cy<18>)
+     XORCY:CI->O           5   0.239   0.665  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Madd_new_distance_xor<19> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/new_distance<19>)
+     LUT4:I0->O            0   0.068   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Mcompar_update_true_lutdi9 (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Mcompar_update_true_lutdi9)
+     MUXCY:DI->O           1   0.223   0.000  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Mcompar_update_true_cy<9> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Mcompar_update_true_cy<9>)
+     MUXCY:CI->O          49   0.220   0.573  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Mcompar_update_true_cy<10> (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/PE3/Mcompar_update_true_cy<10>)
+     LUT5:I4->O           42   0.068   0.572  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/Mmux_Bo1951 (USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/Mmux_Bo195)
+     LUT6:I5->O            1   0.068   0.417  USER_LOGIC_I/BF/DP/DCB/L1CU_0000/L2CU_1/Mmux_Bo9 (USER_LOGIC_I/BF/DP/DCB/Bo_0000<17>)
+     LUT6:I5->O            1   0.068   0.000  USER_LOGIC_I/BF/DP/DCB/Mmux_Bo_0000[31]_dram1[0][31]_mux_37_OUT[465]11 (USER_LOGIC_I/BF/DP/DCB/Bo_0000[31]_dram1[0][31]_mux_37_OUT[465])
+     FDR:D                     0.011          USER_LOGIC_I/BF/DP/DCB/dram2_179
+    ----------------------------------------
+    Total                      5.962ns (2.049ns logic, 3.913ns route)
+                                       (34.4% logic, 65.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'S_AXI_ACLK'
+  Total number of paths / destination ports: 653 / 485
+-------------------------------------------------------------------------
+Offset:              1.615ns (Levels of Logic = 2)
+  Source:            S_AXI_ARESETN (PAD)
+  Destination:       AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9 (FF)
+  Destination Clock: S_AXI_ACLK rising
+
+  Data Path: S_AXI_ARESETN to AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.003   0.652  S_AXI_ARESETN_IBUF (S_AXI_ARESETN_IBUF)
+     LUT4:I0->O           10   0.068   0.458  AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr1 (AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr)
+     FDRE:R                    0.434          AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1
+    ----------------------------------------
+    Total                      1.615ns (0.505ns logic, 1.110ns route)
+                                       (31.3% logic, 68.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'S_AXI_ACLK'
+  Total number of paths / destination ports: 88 / 37
+-------------------------------------------------------------------------
+Offset:              2.866ns (Levels of Logic = 4)
+  Source:            AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4 (FF)
+  Destination:       S_AXI_ARREADY (PAD)
+  Source Clock:      S_AXI_ACLK rising
+
+  Data Path: AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4 to S_AXI_ARREADY
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             8   0.375   0.824  AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4 (AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_4)
+     LUT6:I0->O            1   0.068   0.417  USER_LOGIC_I/slv_read_ack<0>_SW1 (N2513)
+     LUT6:I5->O           36   0.068   0.644  USER_LOGIC_I/slv_read_ack<0> (user_IP2Bus_RdAck)
+     LUT2:I0->O            1   0.068   0.399  AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1 (S_AXI_ARREADY_OBUF)
+     OBUF:I->O                 0.003          S_AXI_ARREADY_OBUF (S_AXI_ARREADY)
+    ----------------------------------------
+    Total                      2.866ns (0.582ns logic, 2.284ns route)
+                                       (20.3% logic, 79.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock S_AXI_ACLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+S_AXI_ACLK     |    5.962|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 58.00 secs
+Total CPU time to Xst completion: 58.12 secs
+ 
+--> 
+
+Total memory usage is 346476 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  105 (   0 filtered)
+Number of infos    :   22 (   0 filtered)
+
